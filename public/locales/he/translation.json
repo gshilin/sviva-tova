@@ -1,0 +1,692 @@
+{
+  "activerecord": {
+    "attributes": {
+      "page": {
+        "message_body": "שדה תוכן ההודעה"
+      },
+      "user": {
+        "email": "כתובת האימייל",
+        "password": "סיסמא"
+      }
+    },
+    "errors": {
+      "messages": {
+        "accepted": "חייב אישור",
+        "blank": "לא יכול להיות ריק",
+        "confirmation": "לא מתאימה לאימות סיסמא",
+        "empty": "לא יכול להיות ריק",
+        "equal_to": "חייב להיות שווה ל- {{count}}",
+        "even": "חייב להיות זוגי",
+        "exclusion": "שדה שמור",
+        "greater_than": "חייב להיות גדול מ- {{count}}",
+        "greater_than_or_equal_to": "חייב להיות שווה או גדול מ {{count}}",
+        "inclusion": "לא כלול ברשימה",
+        "invalid": "שדה שגוי",
+        "less_than": "חייב להיות פחות מ- {{count}}",
+        "less_than_or_equal_to": "חייב להיות קטן או שווה ל {{count}}",
+        "not_a_number": "ערך לא מספרי",
+        "odd": "חייב להיות אי זוגי",
+        "taken": "שהזנת כבר תפוסה",
+        "too_long": "is too long (maximum is {{count}} characters)",
+        "too_short": "אורך קצר מידי (המינימום הוא {{count}} תווים)",
+        "wrong_length": "אורך שגוי (חייב להיות {{count}} תווים)"
+      },
+      "models": {
+        "user": {
+          "attributes": {
+            "email": {
+              "blank": "-- חסר ערך",
+              "invalid": "-- ערך שגוי"
+            },
+            "password": {
+              "blank": "-- לא יכול להיות ריק",
+              "confirmation": "לא מתאימה לאימות סיסמא",
+              "too_short": "קצר מידי (המינימום זה {{count}} תווים)"
+            }
+          },
+          "blank": "שדה ריק"
+        }
+      },
+      "user": {
+        "header": {
+          "one": "התהליך נכשל עקב השגיאות הבאות",
+          "other": "התהליך נכשל עקב {{count}} השגיאות הבאות"
+        }
+      }
+    },
+    "models": {
+      "user": "אימייל"
+    }
+  },
+  "admin": {
+    "pages": {
+      "actions": "פעולות",
+      "add_answer": "הוסף תשובה",
+      "add_new": "הוסף חדש",
+      "add_other": "הוסף תשובה אחרת",
+      "all": "All",
+      "all_posts": "כל הפוסטים",
+      "any_language": "בכל שפה",
+      "are_you_sure": "האם אתה בטוח?",
+      "arr_down": "&#9662;",
+      "arr_up": "&#9652;",
+      "article": "תוכן",
+      "as_draft": "שמור כטיוטה",
+      "assignment": "משימה",
+      "assignments": "משימות",
+      "audio": "אודיו",
+      "big_banner": "באנר גדול",
+      "bottom_side_banner": "באנר צידי תחתון",
+      "bulk_action": "פעולה גורפת",
+      "button_content": "תוכן כפתור",
+      "by_author": "By author",
+      "checkbox": "Checkbox",
+      "comments_enabled": "אפשר הערות",
+      "content": "תוכן הפוסט",
+      "create": "צור",
+      "create_new": "צור חדש",
+      "delete": "מחק",
+      "description": "תאור",
+      "destroy": "הפוסט נמחק מהמערכת",
+      "destroy_failure": "פעולת מחיקת הדף נכשלה",
+      "drafts": "טיוטות",
+      "edit": "ערוך",
+      "embed_string": "הטמע קוד פלייר חיצוני (Embed)",
+      "event": "אירוע",
+      "events": "אירועים",
+      "featured_settings": "הגדרות תצוגה",
+      "filter": "פילטר",
+      "freetext": "Free Text",
+      "future_posts": "פוסטים עתידיים",
+      "help": "עזרה",
+      "image": "תמונה",
+      "is_autoplay": "נגן אוטומטית",
+      "is_bonus": "פוסט בונוס?",
+      "is_multiline": "טקסט בריבוי שורות",
+      "is_sticky": "פוסט דביק",
+      "is_visible": "Visible",
+      "items": "פוסטים",
+      "label_from": "תווית מ-",
+      "label_to": "תווית עד-",
+      "language": "שפה",
+      "leave_comment": "הוסף תגובתך",
+      "list": "List",
+      "logout": "יציאה",
+      "message": "הודעה",
+      "message_body": "הודעה",
+      "messages": "הודעות",
+      "metadata": "מידע על הפוסט",
+      "metadata_and_content": "מידע ותוכן",
+      "name": "שם",
+      "new_article": "תוכן חדש",
+      "new_assignment": "משימה חדשה",
+      "new_message": "הודעה חדשה",
+      "only_moderators": "Only moderators",
+      "only_you": "Only you",
+      "other": "תשובה אחרת",
+      "page_administration": "ניהול פוסטים",
+      "permissions": "הרשאות",
+      "preview": "תצוגה מקדימה",
+      "preview_show": "הצג בתצוגה מקדימה",
+      "project": "פרוייקט",
+      "publish": "פרסם",
+      "publish_at": "פרסום עתידי",
+      "publish_date": "פורסם ב-",
+      "published": "פוסטים שפורסמו",
+      "question": "שאלה",
+      "radio": "Radio",
+      "remove": "מחק",
+      "reset": "נקה את הטופס",
+      "save_and_publish": "שמור ופרסם",
+      "scale": "Scale",
+      "scale_from": "מספור מ-",
+      "scale_to": "מספור עד-",
+      "search": "חיפוש",
+      "select": "select",
+      "select_language": "בחר שפה",
+      "set_as_draft": "הפוך לטיוטה",
+      "show_on_page": "הצג {{count}} פוסטים",
+      "sorting_and_deleting": "מיון ומחיקה",
+      "statistics": "סטטיסטיקה",
+      "status": "סטטוס",
+      "subtitle": "תת כותרת",
+      "success": "הפוסט נוצר בהצלחה",
+      "tags": "תגיות",
+      "title": "כותרת",
+      "title_and_description": "כותרת ותאור",
+      "top_header": "הצג בראש העמוד",
+      "top_side_banner": "באנר צידי עליון",
+      "type": "סוג",
+      "unknown_page": "פוסט לא נמצא במערכת",
+      "unknown_type": "סוג הפוסט: {{page_type}} אינו ידוע",
+      "update": "הפוסט עודכן בהצלחה",
+      "updated_at": "עודכן ב-",
+      "url": "קישור",
+      "video": "וידיאו",
+      "video_player": "נגן וידיאו",
+      "youtube": "YouTube"
+    },
+    "questionnaires": {
+      "add": "הוסף",
+      "add_answer": "הוסף תשובה",
+      "add_other": "הוסף תשובה אחרת",
+      "approve": "אישור שאלון",
+      "are_you_sure": "האם אתה בטוח?",
+      "create_new_questionnaire": "צור שאלון חדש",
+      "create_questionnaire": "צור שאלון",
+      "created_at": "נוצר ב-",
+      "created_by": "נוצר ע\"י",
+      "delete": "מחק",
+      "description": "תאור",
+      "edit": "ערוך",
+      "fields_marked_in_red_are_required": "השדות המסומנים באדום הם שדות חובה",
+      "is_multiline": "ריבוי שורות?",
+      "label_from": "כותרת מ-",
+      "label_to": "כותרת עד",
+      "other": "תשובה אחרת",
+      "questionnaire_description": "תאור השאלון",
+      "questionnaire_editor": "עורך השאלונים",
+      "questionnaire_excerpt": "קטע המובא ממקור",
+      "questionnaire_related_links": "קישורי השאלון",
+      "questionnaire_title": "כותרת השאלון",
+      "remove": "מחק",
+      "scale_from": "מיספור מ-",
+      "scale_to": "מיספור עד",
+      "set_draft": "שמור כטיוטה",
+      "status": "סטאטוס",
+      "title": "כותרת",
+      "update_questionnaire": "עדכן שאלון"
+    },
+    "reports": {
+      "all_groups": "כולם",
+      "attendance_report": "דו\"ח נוכחות חודשי",
+      "basic_report": "דו\"ח פעילות כללי",
+      "date": "בחר חודש",
+      "date_range": "בחר תווך תאריכים",
+      "display_also_profile": "הצג גם פרטי פרופיל",
+      "export_to_excel": "יצוא לקובץ אקסל",
+      "file": "קובץ",
+      "for_month": "עבור",
+      "from": "מ-",
+      "generate_report": "ייצר דוח",
+      "generating": "טוען נתונים...",
+      "group_management": "ניהול קבוצות",
+      "group_name": "שם הקבוצה",
+      "include_email": "להוסיף אימייל לדו\"ח",
+      "load_group_list": "טעינת רשימת קבוצה",
+      "manage_questionnaires": "ניהול שאלונים",
+      "manage_user_lists": "ניהול רשימת קבוצה",
+      "manage_user_roles": "ניהול הרשאות",
+      "minus": "לא פעיל",
+      "order_by_total": "למיין לפי פעילות",
+      "pages_list": "ניהול פוסטים",
+      "plus": "פעיל",
+      "print": "הדפס",
+      "questionnaires_list": "רשימת שאלונים",
+      "remove_user": "מחק משתמש",
+      "report": "דוח",
+      "reports": "דוחות",
+      "show_only_confirmed_users": "הצג רק משתמשים שעברו אישור משתמש",
+      "status": "מצב",
+      "to": "עד-",
+      "total": "סה\"כ",
+      "upload": "שלך",
+      "user": "משתמש",
+      "user_activities": "דוח פעילות משתמש",
+      "user_management": "ניהול משתמשים",
+      "users_who_answered_questionnaires": "משתמשים שענו על שאלונים",
+      "users_who_not_signed_in": "משתמשים שלא נכנסו למערכת",
+      "users_who_signed_in": "משתמשים שנכנסו למערכת",
+      "x": "לא רשום"
+    },
+    "user_list": {
+      "are_you_sure": "האם אתה בטוח?",
+      "create": "משתמש חדש נוצר ברשימה",
+      "create_new_user": "צור חבר קבוצה",
+      "create_user_list": "צור חבר קבוצה",
+      "delete": "מחק",
+      "destroy": "הרשימה נמחקה בהצלחה",
+      "destroy_failure": "הרשימה לא נמחקה",
+      "edit": "עדכן",
+      "email": "אימייל",
+      "first_name": "שם פרטי",
+      "group": "קבוצה",
+      "has_user": "רשום במערכת?",
+      "last_name": "שם משפחה",
+      "please_select_one_of_the_options": "אנא בחר באחת מהאפשרויות",
+      "select_group": "בחר קבוצה",
+      "update": "המשתמש עודכן ברשימה",
+      "update_user_list": "עדכן חבר קבוצה"
+    }
+  },
+  "answer": {
+    "model": {
+      "answer_too_short": "התשובה שלך קצרה מידי, המינימום הוא 10 תווים",
+      "select_at_least_one": "עליך לבחור לפחות באפשרות אחת",
+      "select_one_option": "עליך לבחור באחת מהאפשרויות",
+      "write_an_answer": "עליך לכתוב תשובה"
+    }
+  },
+  "date": {
+    "abbr_day_names": [
+      "א",
+      "ב",
+      "ג",
+      "ד",
+      "ה",
+      "ו",
+      "ש"
+    ],
+    "abbr_month_names": [
+      null,
+      "יאנ",
+      "פב",
+      "מרץ",
+      "אפר",
+      "מאי",
+      "יונ",
+      "יול",
+      "אוג",
+      "ספט",
+      "אוק",
+      "נוב",
+      "דצ"
+    ],
+    "day_names": [
+      "ראשון",
+      "שני",
+      "שלישי",
+      "רביעי",
+      "חמישי",
+      "שישי",
+      "שבת"
+    ],
+    "formats": {
+      "graph": "%d %B",
+      "short": "%d %B %Y"
+    },
+    "month_names": [
+      null,
+      "ינואר",
+      "פברואר",
+      "מרץ",
+      "אפריל",
+      "מאי",
+      "יוני",
+      "יולי",
+      "אוגוסט",
+      "ספטמבר",
+      "אוקטובר",
+      "נובמבר",
+      "דצמבר"
+    ]
+  },
+  "datetime": {
+    "distance_in_words": {
+      "about_x_hours": {
+        "one": "בערך שעה אחת",
+        "other": "בערך {{count}} שעות"
+      },
+      "about_x_months": {
+        "one": "בערך חודש אחד",
+        "other": "בערך {{count}} חודשים"
+      },
+      "about_x_years": {
+        "one": "בערך שנה אחת",
+        "other": "בערך {{count}} שנים"
+      },
+      "half_a_minute": "חצי דקה",
+      "less_than_x_minutes": {
+        "one": "פחות מדקה אחת",
+        "other": "פחות מ- {{count}} דקות",
+        "zero": "פחות מדקה אחת"
+      },
+      "less_than_x_seconds": {
+        "one": "פחות משניה אחת",
+        "other": "פחות מ- {{count}} שניות",
+        "zero": "פחות משניה אחת"
+      },
+      "over_x_years": {
+        "one": "מעל שנה אחת",
+        "other": "מעל {{count}} שנים"
+      },
+      "x_days": {
+        "one": "יום אחד",
+        "other": "{{count}} ימים"
+      },
+      "x_minutes": {
+        "one": "דקה אחת",
+        "other": "{{count}} דקות"
+      },
+      "x_months": {
+        "one": "חודש אחד",
+        "other": "{{count}} חודשים"
+      },
+      "x_seconds": {
+        "one": "שניה אחת",
+        "other": "{{count}} שניות"
+      }
+    },
+    "prompts": {
+      "day": "יום",
+      "hour": "שעה",
+      "minute": "דקה",
+      "month": "חודש",
+      "second": "שניה",
+      "year": "שנה"
+    }
+  },
+  "devise": {
+    "confirmations": {
+      "confirmed": "החשבון שלך אושר בהצלחה, כעת הינך מחובר למערכת",
+      "send_instructions": "נרשמת בהצלחה. בכדי להכנס למערכת עליך ללחוץ על הלינק לאישור באימייל שתקבל בדקות הקרובות!"
+    },
+    "failure": {
+      "inactive": "החשבון שלך עדיין לא עבר אקטיבציה",
+      "invalid": "אימייל או סיסמא שגויים",
+      "invalid_token": "קוד אימות שגוי",
+      "locked": "החשבון שלך נעול",
+      "timeout": "היית במצב לא פעיל זמן ממושך ולכן עליך להכנס שוב",
+      "unauthenticated": "עליך להזין אימייל וסיסמא או להרשם לפני שתוכל להמשיך",
+      "unconfirmed": "עליך לאשר את החשבון שלך (הוראות באימייל שקיבלת) לפני שתוכל להמשיך"
+    },
+    "mailer": {
+      "confirmation_instructions": {
+        "user_subject": "הוראות לאישור חשבון"
+      },
+      "reset_password_instructions": {
+        "user_subject": "הוראות לאיפוס סיסמא"
+      },
+      "unlock_instructions": {
+        "user_subject": "הוראות לשיחרור נעילת חשבון"
+      }
+    },
+    "mails": {
+      "change_my_password": "שנה את הסיסמא שלי",
+      "confirm_my_account": "אשר את החשבון שלי",
+      "confirm_through_link": "אנא לחץ על הקישור למטה כדי לאשר את חשבונך. במידה והנך לוחץ על הקישור והוא מופיע כלא פעיל, אנא העתק והדבק לחלון גלישה חדש",
+      "hello": "שלום",
+      "reset_password_line1": "מישהו (קרוב לודאי אתה) ביקש לשנות את הסיסמא. לביצוע השינוי עליך ללחוץ על הלינק הבא",
+      "reset_password_line2": "אם לא ביקשת לבצע את הפעולה הזו אנא התעלם מההודעה",
+      "reset_password_line3": "הסיסמא שלך לא תשתנה עד שתלחץ על הלינק למעלה ותיצור סיסמא חדשה",
+      "unlock_line1": "חשבון שלך ננעל בעקבות נסיונות כושלים רבים להכנס למערכת",
+      "unlock_line2": "לחץ על הלינר הבא לשיחרור החשבון שלך מנעילה",
+      "unlock_my_account": "שחרר את החשבון שלי מנעילה",
+      "welcome": "שלום"
+    },
+    "passwords": {
+      "send_instructions": "בעוד מספר דקות תקבל אימייל עם הוראות לאיפוס הסיסמא",
+      "updated": "הסיסמא שונתה בהצלחה, הנך מחובר למערכת"
+    },
+    "registrations": {
+      "destroyed": "החשבון שלך בוטל!",
+      "signed_up": "נרשמת בהצלחה. בכדי להכנס למערכת עליך ללחוץ על הלינק לאישור באימייל שתקבל בדקות הקרובות!",
+      "updated": "עדכון החשבון עבר בהצלחה"
+    },
+    "sessions": {
+      "signed_in": "נכנסת למערכת בהצלחה!",
+      "signed_out": "יצאת מהמערכת בהצלחה!"
+    },
+    "unlocks": {
+      "send_instructions": "בעוד מספר דקות תקבל לחשבון האימייל הוראות לשיחרור נעילת חשבון",
+      "unlocked": "החשבון שלך שוחרר מנעילה בהצלחה, כעת הנך מחובר למערכת"
+    },
+    "views": {
+      "back": "חזרה",
+      "cannot_sign_in": "לא מצליח להכנס? לחץ כאן לעזרה!",
+      "change_my_password": "לשנות סיסמא",
+      "confirm_new_password": "הזן שנית את הסיסמא החדשה",
+      "current_password": "הסיסמא הנוכחית (יש בה צורך לאישור הפעולה)",
+      "desktop": "קלאסי",
+      "email": "אימייל",
+      "forgot_password": "שכחת את הסיסמא, לחץ כאן",
+      "forgot_password_help": "לקבלת תמיכה טכנית אנא שלח לנו דוא\"ל ל-<a href=\"mailto:internet@kabbalahgroup.info\">internet@kabbalahgroup.info</a>",
+      "mobile": "נייד",
+      "new_password": "הסיסמא החדשה (לפחות 6 תווים)",
+      "new_user": "משתמש חדש?",
+      "no_confirmation_instructions": "לחץ לקבלת הוראות לאישור חשבון באימייל",
+      "no_unlock_instructions": "לחץ לקבלת הוראות לשיחרור נעילת חשבון",
+      "password": "סיסמא",
+      "remember_me": "זכור אותי במחשב זה",
+      "resend_confirmation_instructions": "שלח מחדש הוראות אישור החשבון",
+      "resend_unlock_instructions": "שלח הוראות לשחרור נעילת חשבון",
+      "select_lang": "בחר ספה",
+      "send_reset_password": "שלח לי הוראות לאיפוס סיסמא",
+      "sign_in": "כניסה",
+      "sign_in_more": "כניסה למערכת&nbsp;&nbsp;&nbsp;&#9668;",
+      "sign_in_more_mobile": "כניסה למערכת",
+      "sign_up": "הרשמה",
+      "sign_up_more": "הרשמה&nbsp;&nbsp;&nbsp;&#9668;",
+      "sign_up_now": "הרשם עכשיו!!!",
+      "version": "צפה ב-",
+      "or": "או הכנס עם",
+      "email_registration": "באפשרותך להרשם דרך הכתובת <a href=\"mailto:internet@kabbalahgroup.info\">internet@kabbalahgroup.info</a>"
+    }
+  },
+  "errors": {
+    "messages": {
+      "already_confirmed": "כבר עבר אישור",
+      "not_found": "לא נמצאה",
+      "not_locked": "לא נעולה"
+    }
+  },
+  "home": {
+    "faq": {
+      "confirmation": "נרשמת לאתר ובכל זאת אינך מצליח להכנס? לאחר ההרשמה המערכת שולחת הודעה לאישור חשבון לכתובת האימייל (שאיתו נרשמת). בגוף ההודעה ישנו לינק שבלחיצה עליו החשבון שלך במערכת הופך לפעיל. אם אינך מצליח למצוא את ההודעה הנ\"ל",
+      "email": "אם אתה נתקל בקשיים להכנס למערכת והסעיפים הקודמים לא עזרו, שלח לנו אימייל ל-",
+      "faq": "שאלות נפוצות",
+      "forgot_password": "נרשמת לאתר, קיבלת הודעה באימייל ואישרת את החשבון. בכל זאת אינך מצליח להכנס? יתכן ששכחת את הסיסמא שאיתה נרשמת.",
+      "unlock": "ניסית להכנס למערכת עם סיסמא שגוייה מס' פעמים רב. יתכן והמערכת נעלה את החשבון שלך כתוצאה מהנסיונות הרבים"
+    },
+    "views": {
+      "active": "פעילים ",
+      "admin": "ניהול",
+      "answered": "עניתי",
+      "blog": "https://laitman.co.il/",
+      "blog_title": "הבלוג של הרב ליטמן",
+      "check_for_new_questionnaire": "בדוק האם קיים שאלון חדש",
+      "dashboard": "הדף שלי",
+      "date": "תאריך",
+      "edit_profile": "ערוך פרופיל",
+      "feed": "https://laitman.co.il/feed/",
+      "last_10_questionnaires": "עשרת השאלונים האחרונים במערכת",
+      "loading": "טוען...",
+      "not_answered": "לא עניתי",
+      "registered": "רשומים ",
+      "site_name": "סביבה טובה - קבלה לעם בני ברוך ע\"ר",
+      "status": "סטאטוס",
+      "title": "כותרת",
+      "title_registered_vs_active": "רשומים לעומת פעילים",
+      "view_reports": "הצג דוחות",
+      "new_internet_project_we_build_it_together": "פרויקט אינטרנט חדש - אנחנו בונים אותו ביחד"
+    }
+  },
+  "kabtv": {
+    "admin": {
+      "add_stream_item": "הוסף stream item",
+      "default": "ברירת מחדל",
+      "description": "תאור",
+      "inactive_image": "תמונה לשידור",
+      "is_active": "שידור פעיל",
+      "language": "שפה",
+      "preset_name": "שם ה- Preset",
+      "problem_saving": "There was a problem saving the record",
+      "select_preset_or_add": "בחר Preset לעריכה או צור חדש",
+      "show": "הצג",
+      "show_questions": "שאלות",
+      "show_schedule": "לוח שידורים",
+      "show_separate_window": "Enable separate window",
+      "show_sketches": "שרטוטים",
+      "show_support": "תמיכה טכנית",
+      "stream_URL": "לינק ל- Stream",
+      "stream_images": "ניהול תמונות",
+      "stream_management": "ניהול סטרימים",
+      "stream_presets": "ניהול סטרימים",
+      "stream_selection": "בחירת Stream",
+      "stream_state": "Stream state",
+      "stream_states": {
+        "is_active": "בשידור",
+        "not_active": "שידור לא פעיל",
+        "preparing_to_broadcast": "הכנה לשידור",
+        "technical_problem": "תקלה טכנית"
+      },
+      "stream_switcher": "פאנל מפעיל השידור",
+      "submit": "שמור",
+      "submitting": "מעדכן שינויים...",
+      "successfully_saved": "נשמר בהצלחה"
+    },
+    "kabtv": {
+      "ask_question": "שאל שאלה",
+      "awaiting_for_approval": "השאלה שלך ממתינה לאישור",
+      "cancel": "ביטול",
+      "describe_problem": "דווח על תקלה בדף השידור‬",
+      "empty_message": "שלחת טופס ללא תוכן. אנא הזן את הודעתך",
+      "first": "ראשון",
+      "flash": "פלאש",
+      "from": "מהיכן",
+      "full_screen": "למסך מלא",
+      "guest": "אורח",
+      "last": "אחרון",
+      "loading": "טוען...",
+      "new_sketches": "יש שרטוטים מעודכנים",
+      "next": "הבא",
+      "no_broadcast": "אין שידורים היום",
+      "no_broadcast_on": "אין שידורים ב-",
+      "no_question": "יש להזין את תוכן השאלה",
+      "no_questions_yet": "אין עדיין שאלות.",
+      "open_in_default_viewer": "לצפייה בנגן מדיה",
+      "prev": "קודם",
+      "question": "שאלה",
+      "questions": "שאלות",
+      "schedule": "לוח שידורים",
+      "schedule_link": "https://docs.google.com/spreadsheet/ccc?key=0AvAzVeqlLTMEdEx0MFNzdFdmWWJNc1JaUUhmci0tMFE&hl=en_US",
+      "schedule_name": "לו\"ז האירועים",
+      "sketches": "שרטוטים",
+      "somewhere": "ממקום לא ידוע",
+      "submit_problem": "ארעה בעיה בשליחת ההודעה, אנא נסה שוב מאוחר יותר",
+      "technical_support": "תמיכה טכנית",
+      "thank_you": "הודעתך נקלטה בהצלחה!",
+      "who": "שם",
+      "wmv": "מדיה פלייר"
+    }
+  },
+  "layout": {
+    "search": "חיפוש",
+    "search_screen_reader": "חפש"
+  },
+  "notification": {
+    "mailer": {
+      "new_questionnaire_for_you": "יש לך שאלון חדש במערכת"
+    },
+    "views": {
+      "click_above_link_to_answer": "לחץ על הלינק בכדי לענות על השאלון",
+      "hi": "שלום",
+      "you_got_new_questionnaire": "קיבלת שאלון חדש"
+    }
+  },
+  "pages": {
+    "update": "הפוסט עודכן בהצלחה",
+    "views": {
+      "content_required": "נא להכניס טקסט",
+      "required": "שדה חובה"
+    }
+  },
+  "profile": {
+    "views": {
+      "change_password": "שנה סיסמא",
+      "dear": "שלום,",
+      "edit": "ערוך",
+      "please_update_profile": "אנא עדכן את הפרופיל שלך",
+      "profile": "פרופיל",
+      "required": "שדה חובה",
+      "updated": "הפרופיל עודכן בהצלחה"
+    }
+  },
+  "questionnaire_answer": {
+    "controller": {
+      "already_answered": "כבר ענית על השאלון שביקשת",
+      "no_questionnaire": "השאלון שביקשת אינו קיים",
+      "no_success": "מענה על השאלון נכשל",
+      "was_success": "מענה על השאלון הסתיים בהצלחה"
+    },
+    "views": {
+      "all_fields_are_required": "כל השדות הם שדות חובה!",
+      "please_select_one_of_the_options": "אנא בחר באחת מהאפשרויות"
+    }
+  },
+  "social_button": {
+    "cancel": "ביטול",
+    "change": "שנה",
+    "clicks_a_day": "לחיצות ביום",
+    "generate_csv_report": "חולל דוח",
+    "i_commit_to": "",
+    "we_all_clicks_for_today": "{{clicks}} לחיצות 'ONE' להיום מתוך {{total}} עבור כל המשתמשים",
+    "we_clicks_for_today": "{{clicks}} לחיצות 'ONE' להיום מתוך {{total}}",
+    "we_clicks_for_today_assist": "{{clicks}} לחיצות 'ONE' להיום מתוכם {{assist}} לחיצות לטובת החברים. ערבות!",
+    "we_group_clicks_for_today": "{{clicks}} לחיצות 'ONE' להיום מתוך {{total}} למשתמשים מקבוצה שלך"
+  },
+  "stream": {
+    "add_to_favorites": "הוסף למועדפים",
+    "all": "כל הפוסטים",
+    "all_items": "המשך",
+    "articles": "תכנים",
+    "assignments": "משימות",
+    "back": "« חזרה לדף הקודם",
+    "bookmarks": "המועדפים שלי",
+    "events": "אירועים",
+    "filter": "הצג לפי",
+    "home": "דף הבית",
+    "mark_as": "סמן כ-",
+    "messages": "הודעות",
+    "more_items": "פוסטים נוספים »",
+    "new_internet": "האינטרנט החדש",
+    "new_items": "חדשים בלבד",
+    "posted_ago": "פורסם  {{when}}",
+    "projects": "פרוייקטים",
+    "projects_discussion": "דיונים",
+    "rav": "מהרב לייטמן",
+    "read": "נקרא",
+    "read_all": "המשך »",
+    "remove_from_favorites": "הסר מהמועדפים",
+    "tags_menu": "נושאים",
+    "unread": "לא נקרא"
+  },
+  "time": {
+    "formats": {
+      "attendance_report": "%d ל%B %Y",
+      "graph": "%d %B",
+      "short": "%d-%m-%Y",
+      "timestamp": "%m-%d-%Y %H:%M"
+    }
+  },
+  "user": {
+    "model": {
+      "avatar": "תמונה",
+      "birthday": "שנת לידה",
+      "choose_image": "בחר תמונה",
+      "city": "עיר",
+      "country": "מדינה",
+      "female": "נקבה",
+      "first_name": "שם פרטי",
+      "gender": "מין",
+      "last_name": "שם משפחה",
+      "male": "זכר",
+      "no_answer": "לא",
+      "no_file_selected": "קובץ לא נבחר",
+      "preferred_language": "שפת תצוגה",
+      "receive_notifications": "האם ברצונך לקבל עדכונים לתיבת האימייל",
+      "region": "איזור",
+      "remove_avatar": "מחק תמונה",
+      "yes_answer": "כן"
+    }
+  },
+  "views": {
+    "back": "חזרה",
+    "cancel": "ביטול",
+    "load": "טען",
+    "please_wait": "נא להמתין...",
+    "signout": "יציאה",
+    "submit": "שלח",
+    "update": "עדכן"
+  }
+}

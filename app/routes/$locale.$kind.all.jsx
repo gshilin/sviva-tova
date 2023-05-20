@@ -10,14 +10,14 @@ import {authenticator} from "../services/auth.server";
 export const loader = async ({request, params}) => {
     const user = await authenticator.isAuthenticated(request, {
         failureRedirect: "/login",
-        successRedirect: "/en/posts/all",
     });
 
     return {user};
 };
 
 export default function Index() {
-    const {user} = useLoaderData();
+    const { user} = useLoaderData();
+    console.log("=============> loader USER 1", user);
     return (
         <div style={{fontFamily: "system-ui, sans-serif", lineHeight: "1.4"}}>
             <h1>Welcome to Remix Protected Dashboard</h1>

@@ -1,0 +1,661 @@
+{
+  "activerecord": {
+    "models": {
+      "user": "email"
+    },
+    "attributes": {
+      "page": {
+        "message_body": "textul mesajului"
+      },
+      "user": {
+        "email": "Adres de e-mail",
+        "password": "Parola"
+      }
+    },
+    "errors": {
+      "user": {
+        "header": {
+          "one": "Operatia a esuat datorita urmatoarei erori",
+          "other": "Operatia a esuat datorita urmatoarei {{count}} erori"
+        }
+      },
+      "messages": {
+        "inclusion": "nu este inclus in lista",
+        "exclusion": "este rezervat",
+        "invalid": "este invalid",
+        "confirmation": "nu se potriveste confirmarea",
+        "accepted": "trebuie acceptat",
+        "empty": "nu poate fi gol",
+        "blank": "nu poate fi liber",
+        "too_long": "este prea lung (maximum este {{count}} caractere)",
+        "too_short": "este prea scurt (minimum este {{count}} caractere)",
+        "wrong_length": "lungimea este gresita (ar trebui sa fie {{count}} caractere)",
+        "not_a_number": "nu este un numar",
+        "greater_than": "trebuie sa fie mai mare decat {{count}}",
+        "greater_than_or_equal_to": "trebuie sa fie mai mare sau egal cu {{count}}",
+        "equal_to": "trebuie sa fie egal cu {{count}}",
+        "less_than": "trebuie sa fie mai mic decat {{count}}",
+        "less_than_or_equal_to": "trebuie sa fie mai mic sau egal cu {{count}}",
+        "odd": "trebuie sa fie impar",
+        "even": "trebuie sa fie par",
+        "taken": "este deja luat"
+      },
+      "models": {
+        "user": {
+          "blank": "camp liber",
+          "attributes": {
+            "email": {
+              "blank": "-- valoare lipsa",
+              "invalid": "este invalid"
+            },
+            "password": {
+              "blank": "-- nu poate fi gol",
+              "too_short": "este prea scurt (minimum este {{count}} caractere)",
+              "confirmation": "nu se potriveste confirmarea"
+            }
+          }
+        }
+      }
+    }
+  },
+  "views": {
+    "submit": "Trimite",
+    "load": "Incarca",
+    "cancel": "Anulare",
+    "signout": "Deconectare",
+    "back": "Inapoi",
+    "update": "Actualizare",
+    "please_wait": "Va rog asteptati..."
+  },
+  "layout": {
+    "search": "Cautare",
+    "search_screen_reader": "Cauta"
+  },
+  "errors": {
+    "messages": {
+      "not_found": "nu s-a gasit",
+      "already_confirmed": "a fost deja confirmat",
+      "not_locked": "nu a fost blocat"
+    }
+  },
+  "devise": {
+    "views": {
+      "sign_in": "Logare",
+      "sign_in_more": "Logare&nbsp;&nbsp;&nbsp;&#9658;",
+      "sign_in_more_mobile": "Logare",
+      "email": "Email",
+      "password": "Parola",
+      "version": "Va rog sa selectati",
+      "mobile": "Transmisie audio pe mobil",
+      "desktop": "Site-ul normal",
+      "select_lang": "Selectati limba",
+      "back": "Inapoi",
+      "remember_me": "Tine-ma minte",
+      "sign_up": "Inregistrare",
+      "sign_up_more": "Inregistrare&nbsp;&nbsp;&nbsp;&#9658;",
+      "forgot_password": "Ati uitat parola?",
+      "forgot_password_help": "For technical support please email us at <a href=\"mailto:internet@kabbalahgroup.info\">internet@kabbalahgroup.info</a>",
+      "no_confirmation_instructions": "Nu ati primit instructiunile de confirmare?",
+      "no_unlock_instructions": "Nu ati primit instructiunile pentru deblocare?",
+      "new_password": "Parola noua (cel putin 6 caractere)",
+      "confirm_new_password": "Confirmarea parolei",
+      "current_password": "Parola curenta (ne trebuie pentru a confirma schimbarea)",
+      "send_reset_password": "Trimiteti-mi instructiunile pentru resetarea parolei",
+      "resend_confirmation_instructions": "Retrimite instructiunile pentru confirmare",
+      "resend_unlock_instructions": "retrimite instructiunile pentru deblocare",
+      "change_my_password": "Schimba parola",
+      "sign_up_now": "Deconectati-va ACUM!!!",
+      "new_user": "Utilizator nou?",
+      "cannot_sign_in": "Nu puteti sa va logati? Apasati aici pentru ajutor!",
+      "email_registration": "Puteti sa va inregistrati si aplicand la <a href=\"mailto:internet@kabbalahgroup.info\">internet@kabbalahgroup.info</a>"
+    },
+    "mails": {
+      "welcome": "Bine ati venit",
+      "confirm_through_link": "Va rog apasati pe link-ul de mai jos pentru a va confirma contul. Daca apasati pe link si apare ca incorect, va rog sa il copiati si sa il scrieti intr-o noua fereastra a browser-ului dvs.",
+      "confirm_my_account": "Confirm contul",
+      "hello": "Buna",
+      "reset_password_line1": "Cineva a solicitat schimbarea parolei si o puteti face prin linkul de mai jos.",
+      "reset_password_line2": "Daca nu ati solicitat asta, va rog sa ignorati acest mail",
+      "reset_password_line3": "Parola dvs. nu se va schimba pana cand nu veti accesa linkul de mai sus si nu veti crea o noua parola",
+      "change_my_password": "Schimba-mi parola",
+      "unlock_line1": "Contul dvs. a fost blocat datorita numarului mare de incercari nereusite de logare",
+      "unlock_line2": "Apasati pe linkul de mai jos pentru deblocarea contului",
+      "unlock_my_account": "Deblocheaza contul"
+    },
+    "failure": {
+      "unauthenticated": "Trebuie sa va logati sau sa va deconectati inainte de a continua.",
+      "unconfirmed": "Trebuie sa confirmati contul inainte de a continua.",
+      "locked": "Contul este blocat.",
+      "invalid": "Email sau parola invalide.",
+      "invalid_token": "Token de autentificare invalid.",
+      "timeout": "Sesiunea dvs. a expirat, va rog sa va logati din nou.",
+      "inactive": "Contul dvs. nu este activat inca."
+    },
+    "sessions": {
+      "signed_in": "Logare reusita.",
+      "signed_out": "Deconectare reusita."
+    },
+    "passwords": {
+      "send_instructions": "Veti primi in cateva minute un email cu instructiuni despre cum sa va resetati parola.",
+      "updated": "Parola dvs. a fost schimbata cu succes. Sunteti acum logat."
+    },
+    "confirmations": {
+      "send_instructions": "Veti primi in cateva minute un email cu instructiuni despre cum sa va confirmati contul.",
+      "confirmed": "Contul dvs. a fost confirmat cu succes. Sunteti acum logat."
+    },
+    "registrations": {
+      "signed_up": "V-ati inregistrat cu succes. Va rog sa va verificati mail-ul pentru mesajul de confirmare si pentru a va activa contul!",
+      "updated": "V-ati actualizat contul cu succees.",
+      "destroyed": "La revedere! Contul dvs. a fost anulat cu succes. Speram sa va revedem curand."
+    },
+    "unlocks": {
+      "send_instructions": "Veti primi in cateva minute un email cu instruciuni despre cum sa va deblocati contul.",
+      "unlocked": "Contul dvs. a fost deblocat cu succes. Sunteti acum logat."
+    },
+    "mailer": {
+      "confirmation_instructions": {
+        "user_subject": "Instructiuni de confirmare"
+      },
+      "reset_password_instructions": {
+        "user_subject": "Instructiuni de resetare parola"
+      },
+      "unlock_instructions": {
+        "user_subject": "Instructiuni pentru deblocare"
+      }
+    }
+  },
+  "answer": {
+    "model": {
+      "select_at_least_one": "Trebuie sa selectati cel putin o optiune.",
+      "write_an_answer": "Trebuie sa scrieti un raspsuns.",
+      "select_one_option": "Trebuie sa selectati una dintre optiuni.",
+      "answer_too_short": "Raspsunsul dvs. este prea scurt. Lungimea minima a raspunsului este de 10 caractere."
+    }
+  },
+  "questionnaire_answer": {
+    "controller": {
+      "no_success": "Chestionarul nu a fost trecut cu succes.",
+      "was_success": "Ati raspuns cu succes la Chestionar.",
+      "no_questionnaire": "Nu exista un asemenea Chestionar",
+      "already_answered": "Ati raspuns deja la acest Chestionar"
+    },
+    "views": {
+      "all_fields_are_required": "Toate campurile sunt obligatorii!",
+      "please_select_one_of_the_options": "Va rog selectati una dintre optiuni"
+    }
+  },
+  "home": {
+    "views": {
+      "site_name": "Sviva Tova",
+      "edit_profile": "Editati profilul",
+      "check_for_new_questionnaire": "Verificati pentru un nou chestionar",
+      "view_reports": "Vedeti rapoartele",
+      "date": "Data",
+      "title": "Titlul",
+      "status": "Status",
+      "answered": "Raspuns",
+      "not_answered": "Nu s-a raspuns",
+      "last_10_questionnaires": "Ultimele 10 chestionare",
+      "dashboard": "Pagina mea",
+      "admin": "Admin",
+      "blog_title": "Blogul lui Dr. Laitman",
+      "blog": "https://www.laitman.ro/",
+      "feed": "https://www.laitman.ro/feed/",
+      "active": "Activ",
+      "button": "Noi!",
+      "registered": "Inregistrat",
+      "title_registered_vs_active": "Inregistrat vs. Activ",
+      "title_registered_vs_button": "Inregistrat vs. Noi!",
+      "loading": "Loading...",
+      "new_internet_project_we_build_it_together": "Un nou proiect pe internet - Il construim impreuna"
+    },
+    "faq": {
+      "faq": "Intrebari frecvente",
+      "confirmation": "V-ati inregistrat deja dar sistemul nu va permite sa intrati? Va rog sa va verificati casuta de email pentru emailul de confirmare. Daca nu exista unul, va rog sa folositi urmatorul link pentru a va trimite un altul.",
+      "forgot_password": "V-ati inregistrat deja dar sistemul tot nu va permite sa intrati? Ati verificat instructiunile de confirmare de mai sus? Poate ati uitat parola? Incercati urmatorul link pentru a o reseta.",
+      "unlock": "Ati fost blocat de sistem. Va rog sa va verificati casuta de email pentru mail-ul deblocare. Daca nu exista unul, va rog sa folositi urmatorul link pentru a vi-l trimite din nou.",
+      "email": "Daca ati incercat tot ceea ce scrie mai sus si inca aveti probleme, va rog sa trimiteti un mail la"
+    }
+  },
+  "pages": {
+    "comments_enabled": "Comentarii permise",
+    "update": "Pagina a fost actualizata cu succes",
+    "views": {
+      "required": "camp necesar",
+      "content_required": "trebuie sa existe un text"
+    }
+  },
+  "profile": {
+    "views": {
+      "edit": "editare",
+      "dear": "Buna,",
+      "please_update_profile": "va rog sa va actualizati profilul",
+      "change_password": "schimba parola",
+      "profile": "profil",
+      "required": "camp necesar",
+      "updated": "Profilul a fost actualizat cu succes"
+    }
+  },
+  "user": {
+    "model": {
+      "gender": "Gen",
+      "male": "Barbat",
+      "female": "Femeie",
+      "birthday": "Anul nasterii",
+      "receive_notifications": "Doriti sa primiti notificare pe email?'",
+      "yes_answer": " Da",
+      "no_answer": " Nu",
+      "preferred_language": "Limba mesajului",
+      "first_name": "Prenumele",
+      "user": "Utilizator",
+      "last_name": "Numele de familie",
+      "avatar": "Avatar",
+      "remove_avatar": "Indeparteaza Avatar",
+      "country": "Tara",
+      "city": "Oras",
+      "region": "Judet",
+      "no_file_selected": "Nicio imagine selectata",
+      "choose_image": "Alege imaginea"
+    }
+  },
+  "admin": {
+    "pages": {
+      "language": "Limba",
+      "any_language": "Orice limba",
+      "comments_enabled": "Comentarii permise",
+      "leave_comment": "Aici puteti sa lasati un comentariu.",
+      "project": "Proiect",
+      "create": "Creat",
+      "by_author": "De autorul",
+      "all": "Toti",
+      "only_you": "Numai dvs.",
+      "only_moderators": "Numai moderatorii",
+      "reset": "Sterge forma",
+      "success": "Pagina a fost creata cu succes",
+      "update": "Pagina a fost actualizata cu succes",
+      "destroy": "Pagina a fost distrusa cu succes",
+      "destroy_failure": "Pagina NU a fost distrusa",
+      "unknown_type": "Tip necunoscut de pagina {{page_type}}",
+      "is_bonus": "Este bonus?",
+      "preview_show": "Afisare in previzualizare",
+      "new_article": "Continut nou",
+      "new_assignment": "Sarcina nou",
+      "assignment": "Sarcina",
+      "event": "Eveniment",
+      "metadata": "Metadata",
+      "content": "Continut",
+      "name": "Nume",
+      "remove": "Sterge",
+      "add_new": "Adauga unul nou",
+      "article": "Continut",
+      "button_content": "Continut pentru buton",
+      "message": "Mesaj",
+      "audio": "Audio",
+      "video": "Video",
+      "question": "Intrebare",
+      "radio": "Radio",
+      "checkbox": "Casuta de verificare",
+      "select": "Selecteaza",
+      "list": "Lista",
+      "scale": "Scala",
+      "freetext": "Text liber",
+      "title_and_description": "Titlu & Decriere",
+      "metadata_and_content": "Metadata & Continut",
+      "sorting_and_deleting": "Sortare & Stergere",
+      "save_and_publish": "Salvarea & Publicare",
+      "as_draft": "Salvati ca ciorna",
+      "publish_at": "Publicat la",
+      "publish": "Publicare",
+      "title": "Titlu",
+      "subtitle": "Subtitlu",
+      "description": "Descriere",
+      "embed_string": "String to embed",
+      "url": "URL",
+      "is_autoplay": "Autoplay",
+      "is_visible": "Vizibil",
+      "featured_settings": "Setari de aparitie",
+      "is_sticky": "Sticky Item",
+      "top_header": "Top Header",
+      "big_banner": "Banner mare",
+      "top_side_banner": "Banner sus pe o parte",
+      "bottom_side_banner": "Banner jos pe o parte",
+      "new_message": "Mesaj nou",
+      "message_body": "Mesaj",
+      "edit": "Editeaza",
+      "delete": "Sterge",
+      "permissions": "Permisiuni",
+      "tags": "Taguri",
+      "video_player": "Video Player",
+      "image": "Imagine",
+      "youtube": "YouTube",
+      "page_administration": "Administrarea paginii",
+      "statistics": "Statistici",
+      "help": "Ajutor",
+      "logout": "Deconectare",
+      "create_new": "Creati unul nou",
+      "search": "Cautare",
+      "status": "Status",
+      "all_posts": "Toate postarile",
+      "drafts": "Ciorne",
+      "published": "Publicate",
+      "future_posts": "Postari viitoare",
+      "type": "Tipul",
+      "assignments": "Sarcini",
+      "events": "Evenimente",
+      "messages": "Mesaje",
+      "filter": "Filtru",
+      "bulk_action": "Bulk Action",
+      "set_as_draft": "Setati ca ciorna",
+      "show_on_page": "Arata {{count}} elementele",
+      "items": "element",
+      "arr_up": "&#9652;",
+      "arr_down": "&#9662;",
+      "updated_at": "Actualizat la",
+      "publish_date": "Data publicarii",
+      "actions": "Actiunii",
+      "are_you_sure": "Sunteti sigur?",
+      "add_answer": "Adaugati raspuns",
+      "other": "Altul",
+      "add_other": "Adaugati altul",
+      "label_from": "Eticheta de la",
+      "label_to": "Eticheta catre",
+      "scale_from": "Scala de la",
+      "scale_to": "Scala catre",
+      "is_multiline": "Este multiliniu?",
+      "unknown_page": "Pagina necunoscuta",
+      "preview": "Previzualizare",
+      "select_language": "Selectati limba",
+      "picture4preview": "Imagine pentru previzualizare"
+    },
+    "user_list": {
+      "create_new_user": "Creaza utilizator nou",
+      "create_user_list": "Creaza lista utilizatorului",
+      "update_user_list": "Actualizeaza lista utilizatorului",
+      "create": "A fost creat cu succes utilizatorul in lista",
+      "update": "A fost actualizata cu succes lista utilizatorilor",
+      "destroy": "Lista cu utilizatori a fost distrusa cu succes",
+      "destroy_failure": "Pagina NU a fost distrusa",
+      "last_name": "Numele de familie",
+      "first_name": "Prenumele",
+      "email": "Email",
+      "has_user": "Are utilizator?",
+      "edit": "Editare",
+      "delete": "Stergere",
+      "are_you_sure": "Sunteti sigur?",
+      "please_select_one_of_the_options": "Va rog sa selectati una dintre optiuni",
+      "select_group": "Selectati grup",
+      "group": "Grup"
+    },
+    "questionnaires": {
+      "create_new_questionnaire": "Creati un nou chestionar",
+      "created_at": "Creat la",
+      "created_by": "Creat de",
+      "title": "Titlu",
+      "status": "Status",
+      "edit": "Editare",
+      "approve": "Aprobare",
+      "set_draft": "Ciorna",
+      "delete": "Stergere",
+      "are_you_sure": "Sunteti sigur?",
+      "questionnaire_editor": "Editare chestionar",
+      "questionnaire_title": "Titlul chestionarului",
+      "questionnaire_description": "Descrierea chestionarului",
+      "questionnaire_related_links": "Linkuri referitoare la chestionar",
+      "questionnaire_excerpt": "Questionnaire Excerpt de la sursa",
+      "remove": "indeparteaza",
+      "description": "Descriere",
+      "add_answer": "Adauga raspuns",
+      "add_other": "Adauga altul",
+      "other": "Altul",
+      "add": "Adauga",
+      "label_from": "Eticheta de la",
+      "label_to": "Eticheta catre",
+      "scale_from": "Scala de la",
+      "scale_to": "Scala catre",
+      "is_multiline": "este multilnie?",
+      "update_questionnaire": "Actualizeaza chestionarul",
+      "create_questionnaire": "Creaza chestionarul",
+      "fields_marked_in_red_are_required": "Campurile markate in rosu sunt obligatorii"
+    },
+    "reports": {
+      "user_activities": "Raportul activitatii utilizatoruli",
+      "date_range": "Va rog selectati o perioada",
+      "from": "De la",
+      "to": "Catre",
+      "users_who_signed_in": "Utilizator care s-a logat",
+      "users_who_not_signed_in": "Utilizator care nu s-a logat",
+      "users_who_answered_questionnaires": "Utilizator care a raspuns la chestionar",
+      "show_only_confirmed_users": "Show only confirmed users",
+      "basic_report": "Raportul activitatii utilizatorului",
+      "questionnaire_report": "Raporu -- Arata numai utilizatorii confirmati",
+      "display_also_profile": "Afisati si profilul",
+      "generate_report": "Genereaza raportl raspunurilor la chestionar ale utilizatorului",
+      "attendance_report": "Raport de asistenta",
+      "export_to_excel": "Exporta in Excel",
+      "date": "Selecteaza o luna",
+      "report": "Raport",
+      "reports": "Rapoarte",
+      "user": "Utilizator",
+      "total": "Total",
+      "upload": "Incarca",
+      "file": "Fisier",
+      "group_name": "Numele grupului",
+      "all_groups": "Toata lumea",
+      "include_email": "Include Email in raport",
+      "order_by_total": "ordoneaza prin 'Total' in loc de 'Numele de familie'",
+      "pages_list": "Editeaza paginile",
+      "translations": "Traduceri",
+      "plus": "activ",
+      "minus": "inactiv",
+      "x": "neinregistrat",
+      "status": "Status",
+      "generating": "Genereaza...",
+      "for_month": "pentru",
+      "print": "Imprima",
+      "manage_questionnaires": "Administreaza chestionarele",
+      "questionnaires_list": "Lista chestionarelor",
+      "user_management": "Management utilizator",
+      "group_management": "Management Grup",
+      "manage_user_roles": "Administreaza rolurile utilizatorului",
+      "remove_user": "Sterge utilizator",
+      "load_group_list": "Incarca lista grupului",
+      "manage_user_lists": "Administreaza listele utilizatorilor"
+    }
+  },
+  "notification": {
+    "views": {
+      "hi": "Buna",
+      "you_got_new_questionnaire": "Aveti un nou chestionar",
+      "click_above_link_to_answer": "Apasati linkul de mai jos pentru a raspunde la el"
+    },
+    "mailer": {
+      "new_questionnaire_for_you": "Exista un nou chestionar pentru dvs. ..."
+    }
+  },
+  "time": {
+    "formats": {
+      "attendance_report": "%B %d, %Y",
+      "short": "%m-%d-%Y",
+      "graph": "%b %d",
+      "timestamp": "%m-%d-%Y %H:%M"
+    }
+  },
+  "date": {
+    "formats": {
+      "attendance_report": "%B %d, %Y",
+      "short": "%m-%d-%Y",
+      "graph": "%b %d"
+    }
+  },
+  "datetime": {
+    "distance_in_words": {
+      "half_a_minute": "jumatate de minut",
+      "less_than_x_seconds": {
+        "one": "mai putin de 1 secunda",
+        "other": "mai putin {{count}} secunde"
+      },
+      "x_seconds": {
+        "one": "1 secunda",
+        "other": "{{count}} secunde"
+      },
+      "less_than_x_minutes": {
+        "one": "mai putin de un minute",
+        "other": "mai putin {{count}} minute"
+      },
+      "x_minutes": {
+        "one": "1 minut",
+        "other": "{{count}} minute"
+      },
+      "about_x_hours": {
+        "one": "aproximativ 1 ora",
+        "other": "aproximativ {{count}} ore"
+      },
+      "x_days": {
+        "one": "1 zi",
+        "other": "{{count}} zile"
+      },
+      "about_x_months": {
+        "one": "aproximativ 1 luna",
+        "other": "aproximativ {{count}} luni"
+      },
+      "x_months": {
+        "one": "1 luna",
+        "other": "{{count}} luni"
+      },
+      "about_x_years": {
+        "one": "aproximativ 1 an",
+        "other": "aproximativ {{count}} ani"
+      },
+      "over_x_years": {
+        "one": "peste 1 an",
+        "other": "peste {{count}} ani"
+      },
+      "almost_x_years": {
+        "one": "aproape 1 an",
+        "other": "aproape {{count}} ani"
+      }
+    },
+    "prompts": {
+      "year": "An",
+      "month": "Luna",
+      "day": "Zi",
+      "hour": "Ora",
+      "minute": "Minut",
+      "second": "Secunda"
+    }
+  },
+  "stream": {
+    "new_internet": "Internet nou",
+    "projects_discussion": "Dicutii",
+    "rav": "De la Rav",
+    "projects": "Proiecte",
+    "posted_ago": "Postat {{when}}",
+    "read_all": "Citeste mai mult »",
+    "home": "Acasa",
+    "all": "Toate postarile",
+    "assignments": "Sarcini",
+    "articles": "Continut",
+    "messages": "Mesaje",
+    "events": "Evenimente",
+    "new_items": "Postari noi",
+    "all_items": "Toate articolele",
+    "more_items": "Mai multe articole »",
+    "tags_menu": "Subiecte",
+    "back": "« Inapoi",
+    "filter": "Filtrare prin",
+    "mark_as": "Marcheaza ca",
+    "read": "citit",
+    "unread": "necitit",
+    "bookmarks": "Favorite",
+    "add_to_favorites": "Adauga la favorite",
+    "remove_from_favorites": "Scoate de la favorite"
+  },
+  "kabtv": {
+    "admin": {
+      "show": "Arata",
+      "show_questions": "Intrebari",
+      "show_schedule": "Program",
+      "show_sketches": "Scheme",
+      "show_coveritlive": "Acoperit Live",
+      "coveritlive_code": "Code (max size 300x385)",
+      "show_support": "sprijin",
+      "show_separate_window": "Permite fereastra separat",
+      "successfully_saved": "Salvat cu succes!",
+      "stream_management": "Administrarea transmisiei",
+      "preset_name": "Timp presetat",
+      "is_active": "Este activ",
+      "default": "Implicit",
+      "inactive_image": "Imagine inactiva",
+      "stream_URL": "Stream URL (Flash: clip=...;stream=...)",
+      "quality": "Calitate",
+      "technology": "Tehnologie",
+      "language": "Limba",
+      "description": "Descriere",
+      "add_stream_item": "Adauga stream item",
+      "submit": "Trimite",
+      "submitting": "Se trimite...",
+      "select_preset_or_add": "Va rog selectati preset pentru a edita sau aduga preset nou",
+      "stream_selection": "Selectare stream selection",
+      "stream_images": "Stream imagini",
+      "stream_presets": "Presetari stream",
+      "stream_state": "Status stream",
+      "problem_saving": "Exista o problema in salvarea inregistrarii",
+      "name": "Nume",
+      "qualities": "Calitate stream",
+      "add_quality": "Adauga calitate",
+      "stream_switcher": "Comutator stream",
+      "stream_states": {
+        "is_active": "In direct",
+        "not_active": "Offline",
+        "preparing_to_broadcast": "Pregatire pentru transmisie",
+        "technical_problem": "Probleme tehnice"
+      }
+    },
+    "kabtv": {
+      "no_broadcast": "Nu exista transmisie",
+      "no_broadcast_on": "Transmisia nu este activa",
+      "no_questions_yet": "Nicio intrebare inca.",
+      "guest": "Oaspete",
+      "somewhere": "Undeva",
+      "awaiting_for_approval": "Intrebarea dvs. asteapta aprobare",
+      "no_question": "Va rog sa completati campul \"Intrebare\"",
+      "first": "Primul",
+      "prev": "Anterior",
+      "last": "Ultimul",
+      "next": "Urmator",
+      "new_sketches": "Nu exista scheme noi",
+      "ask_question": "Pune intrebare",
+      "question": "Intrebare",
+      "who": "Cine",
+      "from": "De unde",
+      "loading": "Se incarca...",
+      "coveritlive": "Blog in direct",
+      "questions": "Intrebari",
+      "schedule": "Program",
+      "schedule_name": "Programul evenimentelor",
+      "schedule_link": "https://docs.google.com/spreadsheet/ccc?key=0AvAzVeqlLTMEdEx0MFNzdFdmWWJNc1JaUUhmci0tMFE&hl=en_US",
+      "sketches": "Scheme",
+      "technical_support": "Sprijin tehnic",
+      "cancel": "Anulare",
+      "open_in_default_viewer": "Dechide in Default Viewer",
+      "full_screen": "Ecran total",
+      "thank_you": "Multumim!",
+      "submit_problem": "Nu se poate trimite mesajul :(\\nVa rog sa incercati mai tarziu.",
+      "describe_problem": "Raportati problema dvs.",
+      "empty_message": "Va rog completati а mesaj in",
+      "flash": "Flash",
+      "wmv": "WMV"
+    }
+  },
+  "social_button": {
+    "i_commit_to": "Ma angajez sa",
+    "clicks_a_day": "clik-uri pe zi",
+    "change": "Schimba",
+    "cancel": "Anuleaza",
+    "generate_csv_report": "Genereaza raport",
+    "we_clicks_for_today": "{{clicks}} 'UN' click din {{total}} pentru astazi",
+    "we_clicks_for_today_assist": "{{clicks}} 'UN' click pentru azi, {{assist}} clik-uri pentru ei sunt in favoarea tuturor. Arvut!",
+    "we_all_clicks_for_today": "{{clicks}} 'UN' click din {{total}} pentru azi pentru toata lumea",
+    "we_group_clicks_for_today": "{{clicks}} 'UN' click din {{total}} penru azi pentru grupul dvs."
+  }
+}

@@ -1,0 +1,672 @@
+{
+  "activerecord": {
+    "attributes": {
+      "page": {
+        "message_body": "Mensaje"
+      },
+      "user": {
+        "email": "Dirección electrónica",
+        "password": "Contraseña"
+      }
+    },
+    "errors": {
+      "messages": {
+        "accepted": "debe ser aceptado",
+        "blank": "no puede estar en blanco",
+        "confirmation": "la confirmación no coincide",
+        "empty": "no puede estar en blanco",
+        "equal_to": "debe ser igual a {{count}}",
+        "even": "debe ser par",
+        "exclusion": "está reservado",
+        "greater_than": "debe ser mayor de {{count}}",
+        "greater_than_or_equal_to": "debe ser mayor o igual a {{count}}",
+        "inclusion": "no está incluido en la lista",
+        "invalid": "no es válido",
+        "less_than": "debe ser menor de {{count}}",
+        "less_than_or_equal_to": "debe ser menor o igual a {{count}}",
+        "not_a_number": "no es un número",
+        "odd": "debe ser impar",
+        "taken": "ya está ocupada",
+        "too_long": "es demasiado larga (el máximo es de {{count}} caracteres)",
+        "too_short": "es demasiado corta (el mínimo es de {{count}} caracteres)",
+        "wrong_length": "tiene una longitud errónea (debería ser de {{count}} caracteres)"
+      },
+      "models": {
+        "user": {
+          "attributes": {
+            "email": {
+              "blank": "-- valor en blanco",
+              "invalid": "no es válido"
+            },
+            "password": {
+              "blank": "-- no puede estar en blanco",
+              "confirmation": "la confirmación no coincide",
+              "too_short": "demasiado corta (el mínimo es de {{count}} caracteres)"
+            }
+          },
+          "blank": "Campo en blanco"
+        }
+      },
+      "user": {
+        "header": {
+          "one": "La operación falló debido al siguiente error",
+          "other": "La operación falló debido a los siguientes {{count}} errores"
+        }
+      }
+    },
+    "models": {
+      "user": "correo-e"
+    }
+  },
+  "kabtv": {
+    "admin": {
+      "show": "Show",
+      "show_questions": "questions",
+      "show_schedule": "schedule",
+      "show_sketches": "sketches",
+      "show_coveritlive": "Cover it Live",
+      "coveritlive_code": "Code (max size 300x385)",
+      "show_special_schedule": "Special Schedule",
+      "special_schedule_code": "Code (max size 300x385)",
+      "show_support": "support",
+      "show_separate_window": "Enable separate window",
+      "successfully_saved": "Succesfully saved!",
+      "stream_management": "Stream Management",
+      "preset_name": "Preset name",
+      "is_active": "Is active",
+      "default": "Default",
+      "inactive_image": "Inactive image",
+      "stream_URL": "Stream URL (Flash: clip=...;stream=...)",
+      "quality": "Quality",
+      "technology": "Technology",
+      "language": "Language",
+      "description": "Description",
+      "add_stream_item": "Add stream item",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "select_preset_or_add": "Please select preset to edit or add new preset",
+      "stream_selection": "Stream selection",
+      "stream_images": "Stream images",
+      "stream_presets": "Stream presets",
+      "stream_state": "Stream state",
+      "problem_saving": "There was a problem saving the record",
+      "name": "Name",
+      "qualities": "Stream qualities",
+      "add_quality": "Add quality",
+      "stream_switcher": "Stream switcher",
+      "stream_states": {
+        "is_active": "On air",
+        "not_active": "Offline",
+        "preparing_to_broadcast": "Preparing to broadcast",
+        "technical_problem": "Technical problem"
+      }
+    },
+    "kabtv": {
+      "no_broadcast": "No broadcast",
+      "no_broadcast_on": "No broadcast on",
+      "no_questions_yet": "No questions yet.",
+      "guest": "Guest",
+      "somewhere": "Somewhere",
+      "awaiting_for_approval": "Your question is awaiting for approval",
+      "no_question": "Please fill \"Question\" field in",
+      "first": "First",
+      "prev": "Prev",
+      "last": "Last",
+      "next": "Next",
+      "new_sketches": "There are new sketches",
+      "ask_question": "Ask Question",
+      "question": "Question",
+      "who": "Who",
+      "from": "From",
+      "loading": "Loading...",
+      "coveritlive": "Chat",
+      "special_schedule": "Program Schedule",
+      "questions": "Questions",
+      "schedule": "Schedule",
+      "schedule_name": "Event Schedule",
+      "schedule_link": "https://docs.google.com/spreadsheet/ccc?key=0AvAzVeqlLTMEdEx0MFNzdFdmWWJNc1JaUUhmci0tMFE&hl=en_US",
+      "sketches": "Sketches",
+      "technical_support": "Technical Support",
+      "cancel": "Cancel",
+      "open_in_default_viewer": "Open in Default Viewer",
+      "full_screen": "Full Screen",
+      "thank_you": "Thank you!",
+      "submit_problem": "Unable to send message :(\\nPlease try again later.",
+      "describe_problem": "Report your problem",
+      "empty_message": "Please fill а message in",
+      "flash": "Flash",
+      "wmv": "WMV"
+    }
+  },
+  "admin": {
+    "footer": "Hogar Virtual de Bnei Baruj<br /> SvivaTová es parte del Hogar Virtual de Bnei Baruj, el medio digital que se pone a disposición a diario para enseñar y compartir la sabiduría de la Cabalá con el mundo en más de 30 idiomas.<br />Si usa Sviva Tová con regularidad y desea convertirse en un miembro contribuyente para apoyar su mantenimiento, por favor contribuya aquí:  <a href=\"https://kli.one?lang=es\">Our Virtual Home</a>",
+    "pages": {
+      "actions": "Acciones",
+      "add_answer": "Añadir respuesta",
+      "add_new": "Añadir nuevo",
+      "add_other": "Añadir Otros",
+      "all_posts": "Todos los mensajes",
+      "any_language": "Cualquier Idioma",
+      "are_you_sure": "¿Está seguro?",
+      "arr_down": "&#9662;",
+      "arr_up": "&#9652;",
+      "article": "Contenido",
+      "as_draft": "Guardar como borrador",
+      "assignment": "Asignación",
+      "assignments": "Asignaciones",
+      "audio": "Audio",
+      "big_banner": "Gran Banner",
+      "bottom_side_banner": "Banner lateral inferior",
+      "bulk_action": "Acción en bloque",
+      "button_content": "Contenido de botón",
+      "checkbox": "Casilla de verificación",
+      "comments_enabled": "Comments enabled",
+      "content": "Contenido",
+      "create": "Crear",
+      "create_new": "Crear nuevo",
+      "delete": "Eliminar",
+      "description": "Descripción",
+      "destroy": "La página fue eliminada con éxito",
+      "destroy_failure": "La página NO fue eliminada",
+      "drafts": "Borradores",
+      "edit": "Editar",
+      "embed_string": "Cadena para incrustar",
+      "event": "Evento",
+      "events": "Eventos",
+      "featured_settings": "Configuración destacados",
+      "filter": "Filtro",
+      "freetext": "Texto libre",
+      "future_posts": "Mensajes futuro",
+      "help": "Ayuda",
+      "image": "Imagen",
+      "is_autoplay": "Reproducción automática",
+      "is_bonus": "¿Es bono?",
+      "is_multiline": "¿Es multilínea?",
+      "is_sticky": "Anexo del artículo",
+      "is_visible": "Visible",
+      "items": "artículos",
+      "label_from": "Desde la etiqueta",
+      "label_to": "Para la etiqueta",
+      "language": "Idioma",
+      "leave_comment": "Here you can leave a comment.",
+      "list": "Lista",
+      "logout": "cierar de sesión",
+      "message": "Mensaje",
+      "message_body": "Mensaje",
+      "messages": "Mensajes",
+      "metadata": "Metadata",
+      "metadata_and_content": "Metadata y contenido",
+      "name": "Nombre",
+      "new_article": "Nuevo contenido",
+      "new_assignment": "Nueva asignación",
+      "new_message": "Nuevo mensaje",
+      "other": "Otros",
+      "page_administration": "Página de administración",
+      "permissions": "Permisos",
+      "preview": "La vista previa",
+      "preview_show": "Mostrar en la vista previa",
+      "project": "Proyecto",
+      "publish": "Publicar",
+      "publish_at": "Publicar en",
+      "publish_date": "Fecha de publicación",
+      "published": "Publicado",
+      "question": "Pregunta",
+      "radio": "Radio ",
+      "remove": "Quitar",
+      "reset": "Forma clara",
+      "save_and_publish": "Guardar y publicar",
+      "scale": "Escala",
+      "scale_from": "Escala de",
+      "scale_to": "Escala de",
+      "search": "Búsqueda",
+      "select": "seleccione",
+      "select_language": "Seleccione Idioma",
+      "set_as_draft": "Establecer como proyecto ",
+      "show_on_page": "Mostrar {{count}} artículos",
+      "sorting_and_deleting": "Clasificación & Eliminación ",
+      "statistics": "Estadísticas",
+      "status": "Condiciones",
+      "subtitle": "Subtítulo",
+      "success": "La página fue creada con éxito",
+      "tags": "Etiquetas",
+      "title": "Título",
+      "title_and_description": "Título y Descripción",
+      "top_header": "Comienzo de la página de cabecera",
+      "top_side_banner": "Banner lateral superior",
+      "type": "Tipo",
+      "unknown_page": "Página desconocida",
+      "unknown_type": "Tipo desconocido de la página {{page_type}}",
+      "update": "La página fue actualizada correctamente",
+      "updated_at": "Actualizado a las",
+      "url": "URL",
+      "video": "Video",
+      "video_player": "Reproductor de vídeo",
+      "youtube": "YouTube"
+    },
+    "questionnaires": {
+      "add": "Add",
+      "add_answer": "Add Answer",
+      "add_other": "Add Other",
+      "approve": "Approve",
+      "are_you_sure": "Are you sure?",
+      "create_new_questionnaire": "Create new questionnaire",
+      "create_questionnaire": "Create Questionnaire",
+      "created_at": "Created at",
+      "created_by": "Created by",
+      "delete": "Delete",
+      "description": "Description",
+      "edit": "Edit",
+      "fields_marked_in_red_are_required": "Fields marked in red are required",
+      "is_multiline": "is multiline?",
+      "label_from": "Label from",
+      "label_to": "Label to",
+      "other": "Other",
+      "questionnaire_description": "Questionnaire Description",
+      "questionnaire_editor": "Questionnaire Editor",
+      "questionnaire_excerpt": "Questionnaire Excerpt from Source",
+      "questionnaire_related_links": "Questionnaire Related Links",
+      "questionnaire_title": "Questionnaire Title",
+      "remove": "remove",
+      "scale_from": "Scale from",
+      "scale_to": "Scale to",
+      "set_draft": "Draft",
+      "status": "Status",
+      "title": "Title",
+      "update_questionnaire": "Update Questionnaire"
+    },
+    "reports": {
+      "all_groups": "Everyone",
+      "attendance_report": "Attendance report",
+      "basic_report": "User Activities report",
+      "date": "Select a month",
+      "date_range": "Por favor, selecciona un rango de fechas",
+      "display_also_profile": "Mostrar también el perfil",
+      "export_to_excel": "Exportar a Excel",
+      "file": "File",
+      "for_month": "for",
+      "from": "De",
+      "generate_report": "Generar informe",
+      "generating": "Generating...",
+      "group_management": "Group management",
+      "group_name": "Group Name",
+      "include_email": "Include Email in report",
+      "load_group_list": "Load Group List",
+      "manage_questionnaires": "Manage questionnaires",
+      "manage_user_lists": "Manage User Lists",
+      "manage_user_roles": "Manage user roles",
+      "minus": "not active",
+      "order_by_total": "Order by activity",
+      "plus": "active",
+      "print": "Print",
+      "questionnaires_list": "Questionnaires list",
+      "remove_user": "Remove user",
+      "report": "Informe",
+      "show_only_confirmed_users": "Show only confirmed users",
+      "status": "Status",
+      "to": "A",
+      "total": "Total",
+      "upload": "Upload",
+      "user": "Usuario",
+      "user_activities": "Informe de actividades del usuario",
+      "user_management": "User management",
+      "users_who_answered_questionnaires": "Usuarios que han respondido cuestionarios",
+      "users_who_not_signed_in": "Usuarios no conectados",
+      "users_who_signed_in": "Usuarios conectados",
+      "x": "not registered"
+    },
+    "user_list": {
+      "are_you_sure": "Are you sure?",
+      "create": "El usuario se ha creado correctamente en la lista",
+      "create_new_user": "Create New User",
+      "create_user_list": "Create User List",
+      "delete": "Delete",
+      "destroy": "Destruyó con éxito la lista de usuarios",
+      "destroy_failure": "La página NO fue destruida",
+      "edit": "Edit",
+      "email": "Email",
+      "first_name": "First Name",
+      "group": "Group",
+      "has_user": "Has user?",
+      "last_name": "Last Name",
+      "please_select_one_of_the_options": "Please select one of the options",
+      "update": "Actualizada correctamente la lista de usuarios",
+      "update_user_list": "Update User List"
+    }
+  },
+  "answer": {
+    "model": {
+      "answer_too_short": "Tu respuesta es demasiado corta. La longitud mínima de la respuesta es de 10 caracteres.",
+      "select_at_least_one": "Tienes que seleccionar al menos una opción.",
+      "select_one_option": "Tienes que seleccionar una de las opciones.",
+      "write_an_answer": "Tienes que escribir una respuesta"
+    }
+  },
+  "date": {
+    "abbr_month_names": [
+      null,
+      "Ene",
+      "Feb",
+      "Mar",
+      "Abr",
+      "May",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dic"
+    ],
+    "day_names": [
+      "Domingo",
+      "Lunes",
+      "Martes",
+      "Miércoles",
+      "Jueves",
+      "Viernes",
+      "Sábado"
+    ],
+    "formats": {
+      "graph": "%d %B",
+      "short": "%d %B %Y"
+    },
+    "month_names": [
+      null,
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ]
+  },
+  "datetime": {
+    "distance_in_words": {
+      "about_x_hours": {
+        "one": "alrededor de 1 hora",
+        "other": "alrededor de {{count}} horas"
+      },
+      "about_x_months": {
+        "one": "alrededor de 1 mes",
+        "other": "alrededor de {{count}} meses"
+      },
+      "about_x_years": {
+        "one": "alrededor de 1 año",
+        "other": "alrededor de {{count}} años"
+      },
+      "almost_x_years": {
+        "one": "casi 1 año",
+        "other": "casi {{count}} años"
+      },
+      "half_a_minute": "medio minuto",
+      "less_than_x_minutes": {
+        "one": "menos de 1 minuto",
+        "other": "menos de {{count}} minutos"
+      },
+      "less_than_x_seconds": {
+        "one": "menos de 1 segundo",
+        "other": "menos de {{count}} segundos"
+      },
+      "over_x_years": {
+        "one": "más de 1 año",
+        "other": "más de {{count}} años"
+      },
+      "x_days": {
+        "one": "1 día",
+        "other": "{{count}} días"
+      },
+      "x_minutes": {
+        "one": "1 minuto",
+        "other": "{{count}} minutos"
+      },
+      "x_months": {
+        "one": "1 mes",
+        "other": "{{count}} meses"
+      },
+      "x_seconds": {
+        "one": "1 segundo",
+        "other": "{{count}} segundos"
+      }
+    },
+    "prompts": {
+      "day": "Día",
+      "hour": "Hora",
+      "minute": "Minutos",
+      "month": "Mes",
+      "second": "Segundos",
+      "year": "Año"
+    }
+  },
+  "devise": {
+    "confirmations": {
+      "confirmed": "Tu cuenta ha sido confirmada con éxito. Ahora estás conectado.",
+      "send_instructions": "En unos minutos recibirás un correo electrónico con instrucciones sobre cómo confirmar tu cuenta."
+    },
+    "failure": {
+      "inactive": "Tu cuenta no ha sido activada aún.",
+      "invalid": "Dirección electrónica o contraseña inválido.",
+      "invalid_token": "Documento de autenticación inválido.",
+      "locked": "Tu cuenta está bloqueada. ",
+      "timeout": "Tu sesión ha expirado, por favor conéctate de nuevo para continuar.",
+      "unauthenticated": "Tienes que conectarte o actualizar tu conexión para continuar.",
+      "unconfirmed": "Tienes que confirmar tu cuenta antes de continuar."
+    },
+    "mailer": {
+      "confirmation_instructions": {
+        "user_subject": "Instrucciones para la confirmación"
+      },
+      "reset_password_instructions": {
+        "user_subject": "Instrucciones para restaurar la contraseña"
+      },
+      "unlock_instructions": {
+        "user_subject": "Instrucciones de desbloqueo"
+      }
+    },
+    "mails": {
+      "change_my_password": "Cambiar mi contraseña",
+      "confirm_my_account": "Confirmar mi cuenta",
+      "confirm_through_link": "Cliquear el enlace abajo para confirmar su cuenta. Si el enlace aparece corrupto, por favor copiar y pegar la información en una nueva página.",
+      "hello": "Hola",
+      "reset_password_line1": "Alguien ha solicitado un enlace para cambiar tu contraseña. Puedes hacerlo a través del enlace siguiente",
+      "reset_password_line2": "Si no lo solicitaste, por favor, ignora este email",
+      "reset_password_line3": "Tu contraseña no cambiará hasta que accedas al enlace siguiente y crees una nueva",
+      "unlock_line1": "Tu cuenta ha sido desbloqueada con éxito. Ahora estás conectado.",
+      "unlock_line2": "Haz clic sobre el enlace siguiente para desbloquear tu cuenta",
+      "unlock_my_account": "Desbloquear mi cuenta",
+      "welcome": "Bienvenido"
+    },
+    "passwords": {
+      "send_instructions": "En unos minutos, recibirás un email con instrucciones sobre cómo cambiar tu contraseña.",
+      "updated": "Tu contraseña fue cambiada con éxito. Ahora estás conectado."
+    },
+    "registrations": {
+      "destroyed": "¡Adios! Tu cuenta ha sido cancelada con éxito. Esperamos volver a verte pronto.",
+      "signed_up": "Te has registrado con éxito. ¡Por favor, revisa tu email en busca de un mensaje de confirmación para activar tu cuenta!",
+      "updated": "Has actualizado tu cuenta con éxito."
+    },
+    "sessions": {
+      "signed_in": "Conectado.",
+      "signed_out": "Desconectado."
+    },
+    "unlocks": {
+      "send_instructions": "En unos minutos, recibirás un email con instrucciones sobre cómo desbloquear tu cuenta.",
+      "unlocked": "Tu cuenta ha sido desbloqueada con éxito. Ahora estás conectado."
+    },
+    "views": {
+      "cannot_sign_in": "¿No puede entrar? Haga click aquí para ayudarle",
+      "change_my_password": "Cambiar mi contraseña",
+      "confirm_new_password": "Confirmación de la contraseña",
+      "current_password": "Contraseña actual (la necesitamos para confirmar tus cambios)",
+      "email": "Email",
+      "forgot_password": "¿Has olvidado tu contraseña?",
+      "forgot_password_help": "Para soporte técnico por favor envíenos un correo electrónico a <a href=\"mailto:internet@kabbalahgroup.info\">internet@kabbalahgroup.info</a>",
+      "new_password": "Nueva contraseña (al menos 6 caracteres)",
+      "new_user": " ¿Es usuario nuevo?",
+      "no_confirmation_instructions": "¿Recibiste instrucciones de confirmación?",
+      "no_unlock_instructions": "¿Recibiste instrucciones para el desbloqueo?",
+      "password": "Contraseña",
+      "remember_me": "Recordármela",
+      "resend_confirmation_instructions": "Volver a enviar las instrucciones de confirmación",
+      "resend_unlock_instructions": "Volver a enviar las instrucciones para el desbloqueo",
+      "send_reset_password": "Enviarme las instrucciones para restaurar mi contraseña",
+      "sign_in": "Acceder",
+      "sign_in_more": "Conectar&nbsp;&nbsp;&nbsp;&#9658;",
+      "sign_in_more_mobile": "Conectar",
+      "sign_up": "Regístrate",
+      "sign_up_more": "Inscríbete&nbsp;&nbsp;&nbsp;&#9658;",
+      "sign_up_now": "¡Regístrese ahora!",
+      "email_registration": "Puede igualmente registrarse escribiendo a <a href=\"mailto:internet@kabbalahgroup.info\">internet@kabbalahgroup.info</a>"
+    }
+  },
+  "errors": {
+    "messages": {
+      "already_confirmed": "ya fue confirmado",
+      "not_found": "no encontrado",
+      "not_locked": "no estaba bloqueado"
+    }
+  },
+  "home": {
+    "faq": {
+      "confirmation": "You have already registered, but the system still doesn't permit you to enter? Please check your mailbox for the confirmation email. If there isn't one, please use the following link to send you another one.",
+      "email": "If you've tried everything above and still have a problem, then please send an email to",
+      "faq": "Frequently Asked Questions",
+      "forgot_password": "You have already registered, but the system still doesn't permit you to enter? Did you check the confirmation instructions above? Maybe you forgot your password? Try the following link to reset it.",
+      "unlock": "You've been locked by the system. Please check your mailbox for the unlock email. If there isn't one, please use the following link to send it again."
+    },
+    "views": {
+      "active": "Activo",
+      "admin": "Admin",
+      "answered": "respondido",
+      "blog": "https://laitman.es/",
+      "blog_title": "Blog del Dr. Laitman",
+      "check_for_new_questionnaire": "Revisar si hay un nuevo cuestionario",
+      "dashboard": "Mi página",
+      "date": "Fecha",
+      "edit_profile": "Editar perfil",
+      "feed": "https://laitman.es/feed",
+      "last_10_questionnaires": "Los últimos 10 cuestionarios",
+      "loading": "Cargando...",
+      "not_answered": "no respondido",
+      "registered": "Registrado",
+      "site_name": "Sviva Tova",
+      "status": "Posición",
+      "title": "Título",
+      "title_registered_vs_active": "Registrado vs. Activo",
+      "view_reports": "Ver informes"
+    }
+  },
+  "layout": {
+    "search": "Buscar",
+    "search_screen_reader": "Buscar"
+  },
+  "notification": {
+    "mailer": {
+      "new_questionnaire_for_you": "Hay un nuevo cuestionario para ti…"
+    },
+    "views": {
+      "click_above_link_to_answer": "Haz clic sobre el enlace para contestarlo",
+      "hi": "Hola",
+      "you_got_new_questionnaire": "Tienes un nuevo cuestionario"
+    }
+  },
+  "pages": {
+    "update": "La página fue actualizada correctamente",
+    "views": {
+      "content_required": "rellene el texto",
+      "required": "campo requerido"
+    }
+  },
+  "profile": {
+    "views": {
+      "change_password": "cambiar contraseña",
+      "dear": "Hola,",
+      "edit": "editar",
+      "please_update_profile": "por favor actualiza tu perfil",
+      "profile": "perfil",
+      "required": "campo requerido",
+      "updated": "El perfil se ha actualizado correctamente"
+    }
+  },
+  "questionnaire_answer": {
+    "controller": {
+      "already_answered": "Ya has contestado este cuestionario",
+      "no_questionnaire": "No existe ese cuestionario",
+      "no_success": "El cuestionario no ha sido respondido con éxito.",
+      "was_success": "El cuestionario ha sido respondido con éxito."
+    },
+    "views": {
+      "all_fields_are_required": "¡Todos los campos son obligatorios!",
+      "please_select_one_of_the_options": "Por favor selecciona una de las acciones"
+    }
+  },
+  "stream": {
+    "add_to_favorites": "Añadir a Favoritos",
+    "all": "Todos ",
+    "all_items": "Todos los artículos",
+    "articles": "Contenidos",
+    "assignments": "Asignaciones",
+    "back": "« Volver",
+    "bookmarks": "favoritos",
+    "events": "Eventos",
+    "filter": "Filtrar por",
+    "home": "Inicio",
+    "mark_as": "Marcar como",
+    "messages": "Mensajes",
+    "more_items": "Más artículos »",
+    "new_internet": "Nueva Internet",
+    "new_items": "Nuevos productos",
+    "posted_ago": "Publicado {{when}}",
+    "projects": "Proyectos",
+    "projects_discussion": "Discusión",
+    "rav": "Por Rav",
+    "read": "leído",
+    "read_all": "Leer todo »",
+    "remove_from_favorites": "Eliminar de mis favoritos",
+    "tags_menu": "Temas",
+    "unread": "no leído"
+  },
+  "time": {
+    "formats": {
+      "attendance_report": "%d ל%B %Y",
+      "graph": "%d %B",
+      "short": "%d-%m-%Y",
+      "timestamp": "%m-%d-%Y %H:%M"
+    }
+  },
+  "user": {
+    "model": {
+      "avatar": "Avatar",
+      "birthday": "Año de nacimiento",
+      "choose_image": "Seleccione Imagen",
+      "city": "Ciudad",
+      "country": "País",
+      "female": "Mujer",
+      "first_name": "Nombre",
+      "gender": "Género",
+      "last_name": "Apellido",
+      "male": "Hombre",
+      "no_answer": " No",
+      "no_file_selected": "No hay imagen",
+      "preferred_language": "Idioma de preferencia",
+      "receive_notifications": "¿Quieres recibir notificaciones en tu dirección electrónica?",
+      "region": "Región",
+      "remove_avatar": "Remover Avatar",
+      "yes_answer": "Sí"
+    }
+  },
+  "views": {
+    "back": "Volver",
+    "cancel": "Cancelar",
+    "load": "Load",
+    "please_wait": "Please wait...",
+    "signout": "Desconectar",
+    "submit": "Enviar",
+    "update": "Actualizar"
+  }
+}
