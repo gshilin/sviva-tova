@@ -13,8 +13,9 @@
     "@remix-run/react": "^1.16.0",
     "@remix-run/serve": "^1.16.0",
     "@remix-run/server-runtime": "^1.0.0",
+    "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
-    "drizzle-orm": "^0.25.4",
+    "drizzle-orm": "^0.26.1",
     "i18next": "^22.4.15",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-fs-backend": "^2.1.1",
@@ -33,6 +34,7 @@
     "remix-auth-socials": "^2.0.5",
     "remix-i18next": "^5.1.1",
     "remix-utils": "^6.3.0",
+    "xml2js": "^0.6.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {

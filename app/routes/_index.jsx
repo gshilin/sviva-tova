@@ -1,5 +1,3 @@
-import {Form, useLoaderData} from "@remix-run/react";
-
 import {authenticator} from "../services/auth.server";
 
 /**
@@ -7,24 +5,11 @@ import {authenticator} from "../services/auth.server";
  * redirect to login page
  *
  */
-export const loader = async ({request, params}) => {
-    const user = await authenticator.isAuthenticated(request, {
-        failureRedirect: "/login",
-        successRedirect: "/en/posts/all",
-    });
+export const loader = async ({ request, params }) => {
+  const user = await authenticator.isAuthenticated(request, {
+    failureRedirect: "/login",
+    successRedirect: "/en/posts/all",
+  });
 
-    return {user};
+  return { user };
 };
-
-export default function Index() {
-    const {user} = useLoaderData();
-    return (
-        <div style={{fontFamily: "system-ui, sans-serif", lineHeight: "1.4"}}>
-            <h1>Welcome to Remix Protected Dashboard</h1>
-            <p>{user?.firstName} {user?.lastName}</p>
-            <Form action="/logout" method="post">
-                <button>Log Out</button>
-            </Form>
-        </div>
-    );
-}

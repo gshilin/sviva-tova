@@ -1,3 +1,99 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    a {
+        @apply text-[#2971a7];
+    }
+
+    p {
+        @apply text-[#666];
+    }
+}
+
+@layer components {
+    .login h2 {
+        @apply text-cyan-500 mx-auto mb-2.5 text-center font-bold text-lg;
+    }
+
+    .login p {
+        @apply mb-2.5 text-[#666];
+    }
+
+    .login h3 {
+        @apply text-[#666] text-sm text-center font-bold;
+    }
+
+    .login ul {
+        @apply list-disc list-inside text-[#666] pt-2.5 pl-2.5;
+    }
+
+    .login li {
+        @apply text-[#666] mb-5;
+    }
+
+    .middle-second {
+        @apply w-full cursor-pointer text-white mb-2.5 p-2.5;
+        @apply rounded-md relative text-center whitespace-normal font-sans;
+        @apply inline-block align-middle text-base font-bold ;
+        font-size: 120%;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .middle-second span {
+        @apply font-normal text-sm;
+    }
+
+    .orange {
+        @apply bg-gradient-to-b from-[#f47721] to-[#cb4b0d] border border-opacity-100 border-[#f4772];
+    }
+
+    .red {
+        @apply bg-gradient-to-b from-[#ff0000] to-[#930202] border border-opacity-100 border-[#ff0000];
+    }
+
+    .green {
+        @apply bg-gradient-to-b from-[#81b253] to-[#587a39] border border-opacity-100 border-[#81b253];
+    }
+
+    .blue {
+        @apply bg-gradient-to-b from-[#00acc2] to-[#2971a7] border border-opacity-100 border-[#00acc2];
+    }
+
+    .donation {
+        height: 57px;
+        width: 220px;
+        @apply block mb-1.5 bg-transparent bg-no-repeat bg-left-top hover:bg-left-bottom bg-cover;
+    }
+
+    .donation-en {
+        background-image: url(/images/donations/donations1-en.jpg);
+    }
+
+    .donation-es {
+        background-image: url(/images/donations/donations1-es.jpg);
+    }
+
+    .donation-he {
+        background-image: url(/images/donations/donations1-he.jpg);
+    }
+
+    .donation-ru {
+        background-image: url(/images/donations/donations1-ru.jpg);
+    }
+
+    .radiozohar {
+        @apply block bg-transparent bg-no-repeat bg-left-top hover:bg-left-bottom bg-cover mb-1.5;
+        height: 57px;
+        width: 220px;
+        background-image: url(/images/radio1.jpg);
+    }
+
+    .music {
+        @apply block bg-transparent bg-no-repeat bg-left-top hover:bg-left-bottom bg-cover mb-1.5;
+        height: 57px;
+        width: 220px;
+        background-image: url(/images/music.jpg);
+    }
+}
