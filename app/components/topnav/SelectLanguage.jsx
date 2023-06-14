@@ -5,7 +5,7 @@ const SelectLanguage = ({ locale, languages }) => {
   const submit = useSubmit();
 
   return (
-    <div className="float-right ml-2 relative top-[-0.6rem] right-[-0.6rem]">
+    <div className="float-right ml-2 relative -top-2.5 -right-2.5">
       <Form>
         <select
           className="px-2 text-gray-700"

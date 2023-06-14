@@ -1,9 +1,11 @@
 import { Link, useMatches } from "@remix-run/react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-export const LeftNav = ({ t, locale, totalPosts, totalArticles, totalMessages, totalProjects, totalEvents, topics }) => {
+export const LeftNav = ({ locale, totalPosts, totalArticles, totalMessages, totalProjects, totalEvents, topics }) => {
+  const { t } = useTranslation();
   const matches = useMatches();
-  console.table(matches);
+  //TODO: console.table(matches);
   return <nav>
     <ul className="border-b-2 pb-2 mb-2">
       <li className="block hover:bg-[#2971a7]">

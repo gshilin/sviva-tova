@@ -15,7 +15,7 @@ export const TopNav = ({ locale, languages, moreLinks = [], t }) => {
       {
         moreLinks.map(l => <TopNavLink title={l.title} to={l.to} key={l.title} pipe />)
       }
-      <TopNavLink title={home} to={`/${locale}`} key={home} />
+      <TopNavLink title={home} to={`/${locale}/posts/all`} key={home} />
     </nav>
   );
 };
