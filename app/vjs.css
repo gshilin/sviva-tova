@@ -206,28 +206,10 @@ input[type=range]:focus::-ms-fill-upper {
     display: block;
 }
 
-#remoteVideo {
-    width: 354px;
-    height: 226px;
-    margin: 30px 0 24px;
-}
-
-.he #bitratelist {
-    float: right;
-}
-
-#bitratelist {
-    height: 28px;
-    margin: 1px 0 0 1px;
-}
-
-#langlist {
-    height: 28px;
-    margin: 1px 0 1px 0;
-}
-
-.he #langlist {
-    float: left;
+#bitratelist, #langlist {
+    color: black;
+    height: 100%;
+    border: 1px solid black;
 }
 
 /* Make the CDN fonts accessible from the CSS */
@@ -237,10 +219,6 @@ input[type=range]:focus::-ms-fill-upper {
     src: url('https://vjs.zencdn.net/f/1/vjs.eot?#iefix') format('embedded-opentype'),
     url('https://vjs.zencdn.net/f/1/vjs.woff') format('woff'),
     url('https://vjs.zencdn.net/f/1/vjs.ttf') format('truetype');
-}
-
-.vjs-default-skin {
-    color: #cccccc;
 }
 
 .vjs-default-skin .vjs-slider {
@@ -291,17 +269,11 @@ input[type=range]:focus::-ms-fill-upper {
 --------------------------------------------------------------------------------
 The default control bar that is a container for most of the controls.
 */
-.vjs-default-skin .vjs-control-bar-top {
-}
-
 .vjs-default-skin .vjs-control-bar {
-    position: absolute;
-    /* Place control bar at the bottom of the player box/video.
-       If you want more margin below the control bar, add more height. */
-    bottom: 0;
-    /* Use left/right to stretch to 100% width of player div */
-    left: 0;
-    right: 0;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    color: silver;
     /* Height includes any margin you want above or below control items */
     height: 3.0em;
     /* background-color-with-alpha */
@@ -309,16 +281,10 @@ The default control bar that is a container for most of the controls.
     background-color: rgba(7, 20, 30, 0.7);
 }
 
-.vjs-default-skin .vjs-control-bar-top {
-    top: 0;
-    bottom: auto;
-}
-
 /* General styles for individual controls. */
 .vjs-default-skin .vjs-control {
     outline: none;
     position: relative;
-    float: left;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -331,9 +297,6 @@ The default control bar that is a container for most of the controls.
     font-family: VideoJS;
     font-size: 1.5em;
     line-height: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -346,15 +309,8 @@ The default control bar that is a container for most of the controls.
     text-shadow: 0em 0em 1em #ffffff;
 }
 
-.vjs-default-skin .vjs-control:focus {
-    /*  outline: 0; */
-    /* keyboard-only users cannot see the focus on several of the UI elements when
-    this is set to 0 */
-}
-
 /* Hide control text visually, but have it available for screenreaders */
 .vjs-default-skin .vjs-control-text {
-    /* hide-visually */
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -427,6 +383,7 @@ The default control bar that is a container for most of the controls.
 }
 
 .vjs-default-skin .vjs-volume-bar {
+    background-color: #505a61;
     width: 13em;
     margin: 0.7em auto 0;
 }
@@ -436,9 +393,6 @@ The default control bar that is a container for most of the controls.
 }
 
 .vjs-default-skin .vjs-volume-level {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 0.5em;
     background: #66a8cc url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC) -50% 0 repeat;
 }
@@ -450,8 +404,6 @@ The default control bar that is a container for most of the controls.
 
 .vjs-default-skin .vjs-volume-handle:before {
     font-size: 0.9em;
-    top: -0.2em;
-    left: -0.2em;
     width: 1em;
     height: 1em;
 }
@@ -465,9 +417,6 @@ The default control bar that is a container for most of the controls.
 --------------------------------------------------------------------------------
 */
 .vjs-default-skin .vjs-progress-control {
-    position: absolute;
-    left: 0;
-    right: 0;
     width: auto;
     font-size: 0.3em;
     height: 1em;
@@ -503,14 +452,10 @@ The default control bar that is a container for most of the controls.
 /* Progress Bars */
 .vjs-default-skin .vjs-progress-holder .vjs-play-progress,
 .vjs-default-skin .vjs-progress-holder .vjs-load-progress {
-    position: absolute;
     display: block;
     height: 100%;
     margin: 0;
     padding: 0;
-    /* Needed for IE6 */
-    left: 0;
-    top: 0;
 }
 
 .vjs-default-skin .vjs-play-progress {
@@ -596,12 +541,9 @@ Positioning of the play button in the center or other corners can be done more
 easily in the skin designer. http://designer.videojs.com/
 */
 .vjs-default-skin .vjs-big-play-button {
-    left: 0.5em;
-    top: 0.5em;
     font-size: 3em;
     display: block;
     z-index: 2;
-    position: absolute;
     width: 4em;
     height: 2.6em;
     text-align: center;
@@ -753,9 +695,6 @@ easily in the skin designer. http://designer.videojs.com/
 
 .vjs-default-skin .vjs-menu {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0em;
     /* (Width of vjs-menu - width of button) / 2 */
     width: 0em;
     height: 0em;
@@ -866,15 +805,11 @@ positioning, use another containing element. Otherwise you risk messing up
 control positioning and full window mode. **
 */
 .video-js {
-    background-color: #FFF;
-    position: relative;
-    padding: 0;
     /* Start with 10px for base font size so other dimensions can be em based and
        easily calculable. */
     font-size: 10px;
     /* Allow poster to be vertially aligned. */
     vertical-align: middle;
-    /*  display: table-cell; */
     /*This works in Safari but not Firefox.*/
     /* Provide some basic defaults for fonts */
     font-weight: normal;
@@ -884,10 +819,6 @@ control positioning and full window mode. **
     /* Turn off user selection (text highlighting) by default.
        The majority of player components will not be text blocks.
        Text areas will need to turn user selection back on. */
-    /* user-select */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -901,19 +832,11 @@ control positioning and full window mode. **
     height: 100%;
 }
 
-/* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when
-   checking fullScreenEnabled. */
-.video-js:-moz-full-screen {
-    position: absolute;
-}
-
 /* Fullscreen Styles */
 body.vjs-full-window {
     padding: 0;
     margin: 0;
     height: 100%;
-    /* Fix for IE6 full-window. http://www.cssplay.co.uk/layouts/fixed.html */
-    overflow-y: auto;
 }
 
 .video-js.vjs-fullscreen {
@@ -926,8 +849,6 @@ body.vjs-full-window {
     right: 0;
     width: 100% !important;
     height: 100% !important;
-    /* IE6 full-window (underscore hack) */
-    _position: absolute;
 }
 
 .video-js:-webkit-full-screen {

@@ -1,6 +1,8 @@
-export const meta = () => {
-  return [{ script: "/scripts/iubenda.js" }];
-};
+const scripts = () => [{
+  src: "/scripts/iubenda.js"
+}];
+
+export const handle = { scripts };
 
 export const Iubenda = () => {
   return (

@@ -39,7 +39,8 @@ const scripts = ({
       src: "https://v4g.kbb1.com/video/js/janus.js"
     });
     metadata.push({
-      src: "https://v4g.kbb1.com/video/js/client-api.js"
+      // TODO src: "https://v4g.kbb1.com/video/js/client-api.js"
+      src: "/scripts/client-api.js"
     });
   }
   return metadata;
@@ -127,10 +128,8 @@ const Event = ({ event }) => {
   const { tags = [] } = event;
   switch (tags[0]) {
     case "webrtc":
-      return <div className="grid gap-4 grid-cols-2 grid-rows-2">
-        <div className="player">
-          <RealTimeBroadcast event={event} />
-        </div>
+      return <div>
+        <RealTimeBroadcast event={event} />
         <div id="services">
           <div className="tabs">
             <span>%= link_to I18n.t('kabtv.kabtv.questions'), '#', :onclick = 'return kabtv.tabs.select_me(this, "questions")' %</span>
