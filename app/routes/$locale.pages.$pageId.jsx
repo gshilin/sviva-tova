@@ -6,6 +6,7 @@ import { pages } from "../services/models/pages.server";
 import { redirect } from "@remix-run/server-runtime";
 import i18next from "../services/i18next.server";
 import { RealTimeBroadcast } from "../components/broadcast/RealTimeBroadcast";
+import { Services } from "../components/broadcast/Services";
 
 export const meta = ({ data: { title, page } }) => {
   const metadata = [
@@ -130,14 +131,7 @@ const Event = ({ event }) => {
     case "webrtc":
       return <div>
         <RealTimeBroadcast event={event} />
-        <div id="services">
-          <div className="tabs">
-            <span>%= link_to I18n.t('kabtv.kabtv.questions'), '#', :onclick = 'return kabtv.tabs.select_me(this, "questions")' %</span>
-            <span className="schedule">%= link_to I18n.t('kabtv.kabtv.schedule'), '#', :onclick = 'return kabtv.tabs.select_me(this, "schedule")' %</span>
-            <span>%= link_to I18n.t('kabtv.kabtv.sketches'), '#', :onclick = 'return kabtv.tabs.select_me(this, "sketches")' %</span>
-          </div>
-          <div className="content">content</div>
-        </div>
+        <Services />
         <div>form</div>
         <div>donate</div>
       </div>;

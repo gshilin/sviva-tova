@@ -1,7 +1,7 @@
 import { useHydrated } from "remix-utils";
 import { useEffect, useReducer, useRef } from "react";
-import { clsx } from "clsx";
 import { useFullscreenStatus } from "../utils/useFullscreenStatus";
+import { cn } from "@/lib/utils";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -16,7 +16,7 @@ const reducer = (state, action) => {
     case "setLanguage":
       return { ...state, langWebRtc: Number(action.value) };
     case "isConnected":
-      return { ...state, isConnected: true };
+      return { ...state, isConnected: action.value };
     case "playpause":
       return { ...state, paused: !state.paused };
     case "volume":
@@ -29,16 +29,6 @@ const reducer = (state, action) => {
 const loadFromLocalStorage = (args) => {
   // TODO
   return args;
-};
-
-const errorHandler = () => {
-  window.setTimeout(function() {
-    window.location.reload();
-  }, 10000);
-};
-
-const destroyHandler = () => {
-  window.location.reload();
 };
 
 export const RealTimeBroadcast = ({ event }) => {
@@ -76,6 +66,8 @@ export const RealTimeBroadcast = ({ event }) => {
     dispatch({ type: "setLanguage", value: Object.keys(languages[Object.keys(languages).at(0)]).at(0) });
 
     return () => {
+      // dispatch({ type: "isConnected", value: false });
+      // janusDetach();
     };
   }, [isHydrated]);
 
@@ -83,12 +75,18 @@ export const RealTimeBroadcast = ({ event }) => {
   useEffect(() => {
       if (!isHydrated) return () => {
       };
+      if (state.isConnected) {
+        console.log("already connected");
+        return;
+      }
       console.log("connect");
-      janusConnect(errorHandler, destroyHandler, () => {
-        dispatch({ type: "isConnected" });
+      janusConnect(() => {
+      }, () => {
+      }, () => {
+        dispatch({ type: "isConnected", value: true });
       }, true);
     },
-    [isHydrated, state.bitrateWebRtc, state.langWebRtc]);
+    [isHydrated, state.isConnected, state.bitrateWebRtc, state.langWebRtc]);
 
   // reconnect on bitrate change
   useEffect(() => {
@@ -163,7 +161,7 @@ export const RealTimeBroadcast = ({ event }) => {
 
   return <>
     <div className={
-      clsx("video-js vjs-default-skin",
+      cn("video-js vjs-default-skin",
         state.paused ? "" : "vjs-playing")
     }>
       <div className="vjs-control-bar">
@@ -188,7 +186,7 @@ export const RealTimeBroadcast = ({ event }) => {
       </div>
       <div>
         <video ref={videoRef} id="remoteVideo" className="w-full" playsInline autoPlay muted={true}></video>
-        <audio ref={audioRef} id="remoteAudio" autoPlay muted={true}></audio>
+        <audio ref={audioRef} id="remoteAudio" autoPlay muted={state.muted}></audio>
       </div>
       <div className="vjs-control-bar">
         <div className="grid grid-flow-col">
@@ -204,7 +202,7 @@ export const RealTimeBroadcast = ({ event }) => {
           </div>
           <div id="mutebtn"
                className={
-                 clsx("vjs-mute-control vjs-control",
+                 cn("vjs-mute-control vjs-control",
                    state.muted ? "vjs-vol-0" : "vjs-vol-3")
                }
                onClick={() => dispatch({ type: "mute" })}

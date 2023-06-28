@@ -1,16 +1,4 @@
 let janus = null;
-let videostr;
-let audiostr;
-let mixaudio;
-let galaxy;
-let translation;
-let srv;
-let pluginHandles = [];
-let connection = null;
-let errorHandler = null;
-let destroyHandler = null;
-let android = false;
-let debug = true;
 const gxycol = [0, 201, 203, 202];
 const trllang = {
   "trl": {
@@ -24,41 +12,38 @@ const trllang = {
   }
 };
 
-
-let callbackFunc = null;
-
-function janusConnect(error, destroy, callback, do_debug) {
-  errorHandler = error;
-  destroyHandler = destroy;
-  callbackFunc = callback;
-  debug = do_debug;
-
-  srv = "https://str1.kab.sh/janusgxy";
-
-  Janus.init({
-    debug: false,
-    callback: initCallback
+function janusDetach() {
+  janus.pluginHandles.forEach(function(handle) {
+    handle.send({ "message": { "request": "stop" } });
+    handle.hangup();
   });
 
-  return connection;
+  janus.janus.destroy();
+}
+
+function janusConnect(error, destroy, callback, do_debug) {
+  Janus.init({
+    debug: false,
+    callback: () => initCallback(error, destroy, callback, do_debug)
+  });
 }
 
 function janusAttachVideo(bitrate, videoID) {
-  if (connection === false) {
+  if (janus.connection === false) {
     return false;
   }
 
   if (bitrate === 0) {
-    if (videostr === null) {
+    if (janus.videostr === null) {
       return true;
     }
-    videostr.send({ "message": { "request": "stop" } });
-    videostr.hangup();
-    videostr = null;
+    janus.videostr.send({ "message": { "request": "stop" } });
+    janus.videostr.hangup();
+    janus.videostr = null;
   } else {
-    if (videoID === 1 && android)
+    if (videoID === 1 && janus.android)
       videoID = 801;
-    if (videoID === 11 && android)
+    if (videoID === 11 && janus.android)
       videoID = 802;
     attachStreamingHandle(bitrate, videoID, true);
   }
@@ -66,45 +51,62 @@ function janusAttachVideo(bitrate, videoID) {
 }
 
 function janusAttachAudio(lang, audioID) {
-  if (connection === false) {
+  if (janus.connection === false) {
     return false;
   }
   attachStreamingHandle(lang, audioID, false);
   return true;
 }
 
-function initCallback() {
+function initCallback(error, destroy, callback, do_debug) {
+  if (janus !== null && janus.connection) {
+    return;
+  }
   // Create session
-  janus = new Janus({
-    server: srv,
-    iceServers: [{ urls: ["stun:stun1.kab.sh:3478", "stun:stun2.kab.sh:3478"] }],
-    success: function() {
-      connection = true;
-      if (callbackFunc) {
-        callbackFunc();
+  janus = {
+    janus: new Janus({
+      server: "https://str1.kab.sh/janusgxy",
+      iceServers: [{ urls: ["stun:stun1.kab.sh:3478", "stun:stun2.kab.sh:3478"] }],
+      success: function() {
+        janus.connection = true;
+        if (janus.callbackFunc) {
+          janus.callbackFunc();
+        }
+      },
+      error: function(error) {
+        janus.connection = false;
+        if (janus.errorHandler != null) {
+          janus.errorHandler();
+        }
+      },
+      destroyed: function() {
+        janus.connection = false;
+        if (janus.destroyHandler != null) {
+          janus.destroyHandler();
+        }
       }
-    },
-    error: function(error) {
-      connection = false;
-      if (errorHandler != null) {
-        errorHandler();
-      }
-    },
-    destroyed: function() {
-      connection = false;
-      if (destroyHandler != null) {
-        destroyHandler();
-      }
-    }
-  });
+    }),
+    videostr: null,
+    audiostr: null,
+    mixaudio: null,
+    galaxy: null,
+    translation: null,
+    pluginHandles: [],
+    connection: null,
+    errorHandler: error,
+    destroyHandler: destroy,
+    callbackFunc: callback,
+    android: false,
+    debug: do_debug
+  };
 
   onunload = () => {
-    pluginHandles.forEach(function(handle) {
+    janus.pluginHandles.forEach(function(handle) {
       handle.send({ "message": { "request": "stop" } });
       handle.hangup();
     });
 
-    janus.destroy();
+    janus.janus.destroy();
   };
 }
 
@@ -113,32 +115,32 @@ function attachStreamingHandle(streamId, mediaElementSelector, is_video) {
 
   const body = { "request": "switch", "id": streamId };
   if (is_video === true) {
-    if (videostr !== undefined && videostr !== null) {
-      videostr.send({ "message": body });
+    if (janus.videostr !== undefined && janus.videostr !== null) {
+      janus.videostr.send({ "message": body });
       return;
     }
   } else {
     //console.log("--:: "+mediaElementSelector);
-    mixaudio = document.getElementById(mediaElementSelector.split("#")[1]);
-    if (audiostr !== undefined && audiostr !== null) {
-      audiostr.send({ "message": body });
+    janus.mixaudio = document.getElementById(mediaElementSelector.split("#")[1]);
+    if (janus.audiostr !== undefined && janus.audiostr !== null) {
+      janus.audiostr.send({ "message": body });
       return;
     }
   }
 
-  janus.attach({
+  janus.janus.attach({
     plugin: "janus.plugin.streaming",
     success: function(pluginHandle) {
       streaming = pluginHandle;
 
       // We need to remember where audio and where video handle
       if (is_video === true) {
-        videostr = streaming;
+        janus.videostr = streaming;
       } else {
-        audiostr = streaming;
+        janus.audiostr = streaming;
       }
 
-      pluginHandles.push(streaming);
+      janus.pluginHandles.push(streaming);
 
       // Play stream
       streaming.send({ "message": { "request": "watch", id: streamId } });
@@ -150,14 +152,14 @@ function attachStreamingHandle(streamId, mediaElementSelector, is_video) {
       onStreamingMessage(streaming, msg, jsep);
     },
     onremotestream: function(stream) {
-      if (debug) {
+      if (janus.debug) {
         console.debug("Got a remote stream!", stream);
       }
       const elem = document.getElementById(mediaElementSelector.split("#")[1]);
       Janus.attachMediaStream(elem, stream);
     },
     oncleanup: function() {
-      if (debug) {
+      if (janus.debug) {
         console.debug("attachStreamingHandle: Got a cleanup notification");
       }
     }
@@ -171,18 +173,18 @@ function checkData() {
 
 function streamGalaxy(st) {
   if (st) {
-    mixaudio.muted = true;
-    attachStreamGalaxy(gxycol[json.col], gxyaudio);
-    attachStreamTranslation(trllang["trl"][localStorage.langtext], trlaudio);
+    janus.mixaudio.muted = true;
+    attachStreamGalaxy(gxycol[json.col], janus.gxyaudio);
+    attachStreamTranslation(trllang["trl"][localStorage.langtext], janus.trlaudio);
     console.log("You now talking");
   } else {
     console.log("Stop talking");
-    mixaudio.muted = false;
+    janus.mixaudio.muted = false;
     var body = { "request": "stop" };
-    galaxy.send({ "message": body });
-    translation.send({ "message": body });
-    galaxy.hangup();
-    translation.hangup();
+    janus.galaxy.send({ "message": body });
+    janus.translation.send({ "message": body });
+    janus.galaxy.hangup();
+    janus.translation.hangup();
   }
 }
 
@@ -190,24 +192,24 @@ function attachStreamGalaxy(streamId, mediaElementSelector) {
   janus.attach({
     plugin: "janus.plugin.streaming",
     success: function(pluginHandle) {
-      galaxy = pluginHandle;
-      galaxy.send({ "message": { "request": "watch", id: streamId } });
+      janus.galaxy = pluginHandle;
+      janus.galaxy.send({ "message": { "request": "watch", id: streamId } });
     },
     error: function(error) {
       displayError("Error attaching plugin: " + error);
     },
     onmessage: function(msg, jsep) {
-      onStreamingMessage(galaxy, msg, jsep);
+      onStreamingMessage(janus.galaxy, msg, jsep);
     },
     onremotestream: function(stream) {
-      if (debug) {
+      if (janus.debug) {
         console.debug("Got a remote stream!", stream);
       }
       const elem = document.getElementById(mediaElementSelector.split("#")[1]);
       Janus.attachMediaStream(elem, stream);
     },
     oncleanup: function() {
-      if (debug) {
+      if (janus.debug) {
         console.debug("attachStreamGalaxy: Got a cleanup notification");
       }
     }
@@ -256,7 +258,7 @@ function attachStreamingByLang(streamName, mediaElementSelector) {
     plugin: "janus.plugin.streaming",
     success: function(pluginHandle) {
       streaming = pluginHandle;
-      pluginHandles.push(streaming);
+      janus.pluginHandles.push(streaming);
 
       const streamId = singleLangStreams[streamName];
 
@@ -276,14 +278,14 @@ function attachStreamingByLang(streamName, mediaElementSelector) {
       console.log("We got data from the DataChannel! " + data);
     },
     onremotestream: function(stream) {
-      if (debug) {
+      if (janus.debug) {
         console.debug("Got a remote stream!", stream);
       }
       const elem = document.getElementById(mediaElementSelector.split("#")[1]);
       Janus.attachMediaStream(elem, stream);
     },
     oncleanup: function() {
-      if (debug) {
+      if (janus.debug) {
         console.debug("attachStreamingByLang: Got a cleanup notification");
       }
     }
@@ -291,12 +293,12 @@ function attachStreamingByLang(streamName, mediaElementSelector) {
 }
 
 function onStreamingMessage(handle, msg, jsep) {
-  if (debug) {
+  if (janus.debug) {
     console.debug("Got a message", msg);
   }
 
   if (jsep !== undefined && jsep !== null) {
-    if (debug) {
+    if (janus.debug) {
       console.debug("Handling SDP as well...", jsep);
     }
 
@@ -305,7 +307,7 @@ function onStreamingMessage(handle, msg, jsep) {
       jsep,
       media: { audioSend: false, videoSend: false, data: true },	// We want recvonly audio/video
       success: function(jsep) {
-        if (debug) {
+        if (janus.debug) {
           console.log("Got SDP!");
           console.log(jsep);
         }
@@ -319,7 +321,7 @@ function onStreamingMessage(handle, msg, jsep) {
 }
 
 function displayError(errorMessage) {
-  if (debug) {
+  if (janus.debug) {
     console.error(errorMessage);
   }
 }
