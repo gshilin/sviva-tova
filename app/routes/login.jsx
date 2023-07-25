@@ -35,7 +35,7 @@ export const loader = async ({ request, params }) => {
  */
 export const action = async ({ request, context }) => {
   // call my authenticator
-  return await authenticator.authenticate("form", request, {
+  return authenticator.authenticate("form", request, {
     successRedirect: "/en/posts/all",
     throwOnError: true,
     context
@@ -131,17 +131,15 @@ const loginText = {
     </ul>`
 };
 
-const LeftSide = ({ locale }) => {
-  return (
-    <div className="login">
-      <div
-        dangerouslySetInnerHTML={{
-          __html: loginText[locale] || loginText["en"]
-        }}
-      />
-    </div>
-  );
-};
+const LeftSide = ({ locale }) => (
+  <div className="login">
+    <div
+      dangerouslySetInnerHTML={{
+        __html: loginText[locale] || loginText["en"]
+      }}
+    />
+  </div>
+);
 
 const FacebookButton = () => (
   <button
